@@ -22,7 +22,7 @@ window.plugin.wetterberichtportals = function() {};
 window.plugin.wetterberichtportals.city = function() {};
 window.plugin.wetterberichtportals.city.berlin = function() {
   return {
-    'areas': ['PDL', 'GM', 'ESG', 'GS', 'TP', 'PDP', 'SC', 'LG', 'GK', 'THF', 'NK', 'KOE'], // select area(s) you want to see
+    'areas': ['PDL', 'GM', 'ESG', 'GS', 'TP', 'PDP', 'SC', 'LG', 'GK', 'THF', 'NK', 'KOE', 'PKW'], // select area(s) you want to see
     'PDL': {
       'portals': [
         'cb8f749054c8403f92d51afd3484cb25.12', // Airfild Memorial
@@ -374,7 +374,20 @@ window.plugin.wetterberichtportals.city.berlin = function() {
         'e41c17e9b5074fe59c21db6ed0f905b1.11', // Schloss Köpenick
         'bfa25bec4a204c3c987d468190970eb8.11', // Hauptmann v. Koepenick
       ]
-    }
+    },
+    'PKW': {
+      'portals': [
+        'ee33f78973cb4c559471a6398c241a91.11', // Breite Strasse Cage Sculpture
+        '9c6a5c9389c441d4ab7094b60086ce61.11', // Wasserpumpe Schlosspark
+        'deb2c5f334e64c7fa5a1e42353d6f301.11', // Drei Frauen an der Panke
+        'cb23a09d829543e5bd0b87b572f2d455.11', // Skulptur am Schloßpark
+        'd01286ba1b7740248329226e07fe4579.11', // Theo Balden, Mutter Und Kind, 
+        'ed531495a3a14f64ba3ae38e9d9a2d4a.12', // Carl von Ossietzky
+        '4225fd1b6751400f93be9d9565948d4a.11', // Ev. Kirche Alt-Pankow
+        '8447621d7d7c4666b792b5230f6638c2.12', // Springbrunnen
+        'f81d0e8ab468452f984e8ea5852df515.11', // Holzskulptur
+       ]
+     },
 //      '': {
 //        'portals': [
 //
