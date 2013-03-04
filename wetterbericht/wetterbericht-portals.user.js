@@ -382,6 +382,7 @@ window.plugin.wetterberichtportals.city.berlin = function() {
 //      },
   };
 };
+var setup = function(){};
 // PLUGIN END //////////////////////////////////////////////////////////
 
   if(window.iitcLoaded && typeof setup === 'function') {
