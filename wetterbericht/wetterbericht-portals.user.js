@@ -22,7 +22,7 @@ window.plugin.wetterberichtportals = function() {};
 window.plugin.wetterberichtportals.city = function() {};
 window.plugin.wetterberichtportals.city.berlin = function() {
   return {
-    'areas': ['PDL', 'GM', 'ESG', 'GS', 'TP', 'PDP', 'SC', 'LG', 'GK', 'THF', 'NK', 'KOE', 'PKW'], // select area(s) you want to see
+    'areas': ['PDL', 'GM', 'ESG', 'GS', 'TP', 'PDP', 'SC', 'LG', 'GK', 'THF', 'NK', 'KOE', 'PKW', 'VPF'], // select area(s) you want to see
     'PDL': {
       'portals': [
         'cb8f749054c8403f92d51afd3484cb25.12', // Airfild Memorial
@@ -388,6 +388,24 @@ window.plugin.wetterberichtportals.city.berlin = function() {
         'f81d0e8ab468452f984e8ea5852df515.11', // Holzskulptur
        ]
      },
+     'VPF': {
+        'portals': [
+          '9551f8376dfc49d6898345735d1d929c.11', // FridericusRex
+          'c09fbb772c2a4b5985d28066b88491d5.12', // Märchenbrunnen im Volkspark Fr
+          '85957cbaf30349998636e6ef60dac45d.12', // Brüderchen und Schwesterchen -
+          'fb2e2d78aaf74615a292166b322d13cb.12', // Gedenkstatte der Deutschen Int
+          'cd5dde3654694fca99c278b2a33f78b3.12', // Aschenputtel - Märchenbrunnen 
+          'd7b2f7e2d16d4deb9ce58cc991621315.11', // Pavillon
+          'ed32e054cbd64a2794ac0ae950adeebe.11', // Steinmann
+          '2df7589c11524e879b5f03ba98bc359c.11', // nakedwitch
+          '796704ef6fff40e9abcb4adee9b19932.11', // Steinrobbe
+          '772607ecfd654a30bbe7f8503baa0dec.11', // Steinpinguin
+          '675e8163cac044fc9e8450178cc5d829.11', // Deutsch Polnisches Denkmal
+          'c6592dd52f7a476587b07a2452d11b78.11', // Japanische Glocke
+          '65b2f1c2b59f4ef4aeb565f796453273.11', // Base Station
+          '26e0183afd43401ba0a157b92b582e14.11', // SEZ Berlin
+        ]
+      },
 //      '': {
 //        'portals': [
 //
