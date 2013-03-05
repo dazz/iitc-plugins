@@ -14,7 +14,7 @@ Bemerkungen am Anfang:
 
 ## Plugins
 
-* wetterbericht: 
+* [wetterbericht](https://github.com/dazz/iitc-plugins/tree/master/wetterbericht): Der Wetterbericht für Berlin
 * portalOwner: 
 * upgradeablePortals: 
 
