@@ -30,8 +30,9 @@ window.plugin.upgradeablePortals._updating = false;
 window.plugin.upgradeablePortals._renderLimitReached = false;
 
 window.plugin.upgradeablePortals.updateLayer = function() {
-  if (!window.map.hasLayer(window.plugin.upgradeablePortals.layer) || window.plugin.upgradeablePortals._updating ||
-      window.plugin.upgradeablePortals.layer === null)
+  if (window.plugin.upgradeablePortals._updating ||
+      window.plugin.upgradeablePortals.layer === null ||
+      !window.map.hasLayer(window.plugin.upgradeablePortals.layer))
     return;
   window.plugin.upgradeablePortals._updating = true;
   window.plugin.upgradeablePortals.layer.clearLayers();

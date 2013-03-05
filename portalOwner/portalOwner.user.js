@@ -32,10 +32,10 @@ window.plugin.portalOwner._updating = false;
 window.plugin.portalOwner._renderLimitReached = false;
 
 window.plugin.portalOwner.updateLayer = function() {
-  if (!window.map.hasLayer(window.plugin.portalOwner.layer) || window.plugin.portalOwner._updating ||
-      window.plugin.portalOwner.layer === null) {
+  if (window.plugin.upgradeablePortals._updating ||
+      window.plugin.upgradeablePortals.layer === null ||
+      !window.map.hasLayer(window.plugin.upgradeablePortals.layer))
     return;
-  }
   window.plugin.portalOwner._updating = true;
   window.plugin.portalOwner.layer.clearLayers();
 
