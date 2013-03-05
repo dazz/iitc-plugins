@@ -22,7 +22,7 @@ window.plugin.wetterberichtportals = function() {};
 window.plugin.wetterberichtportals.city = function() {};
 window.plugin.wetterberichtportals.city.berlin = function() {
   return {
-    'areas': ['PDL', 'GM', 'ESG', 'GS', 'TP', 'PDP', 'SC', 'LG', 'GK', 'THF', 'NK', 'KOE', 'PKW', 'VPF'], // select area(s) you want to see
+    'areas': ['PDL', 'GM', 'ESG', 'GS', 'TP', 'PDP', 'SC', 'LG', 'GK', 'THF', 'NK', 'KOE', 'PKW', 'VFH'], // select area(s) you want to see
     'PDL': {
       'portals': [
         'cb8f749054c8403f92d51afd3484cb25.12', // Airfild Memorial
@@ -388,7 +388,7 @@ window.plugin.wetterberichtportals.city.berlin = function() {
         'f81d0e8ab468452f984e8ea5852df515.11', // Holzskulptur
        ]
      },
-     'VPF': {
+     'VFH': {
         'portals': [
           '9551f8376dfc49d6898345735d1d929c.11', // FridericusRex
           'c09fbb772c2a4b5985d28066b88491d5.12', // Märchenbrunnen im Volkspark Fr
