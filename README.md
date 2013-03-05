@@ -1,9 +1,9 @@
 # iitc-plugins
 
-    /!\ Ich werde keinen Support machen für jegliche Fragen zum Thema Browser, 
-        Extensions, Scripte, JavaScript, Installieren, CPU zu heiß ...
-    /!\ Wer diese Scripte installiert weiß was er tut oder/und kann Googeln
-    /!\ Wer etwas beitragen möchte kann einen Issue aufmachen, Forken, Pull-Request schicken
+Bemerkungen am Anfang:
+* Ich werde keinen Support machen für jegliche Fragen zum Thema Browser, Extensions, Scripte, JavaScript, Installieren, CPU zu heiß, Wetter zu kalt, Plugins sind Cheaten, usw.
+* Wer diese Scripte installiert weiß was er tut oder/und kann Googeln
+* Wer etwas beitragen möchte kann einen Issue aufmachen, Forken, [Pull-Request](https://github.com/breunigs/ingress-intel-total-conversion/blob/gh-pages/HACKING.md#code-style) schicken
 
 ## Um Plugins für IITC zu installieren:
 
