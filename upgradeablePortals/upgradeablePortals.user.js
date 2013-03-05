@@ -41,7 +41,8 @@ window.plugin.upgradeablePortals.updateLayer = function() {
   var minY = 0;
 
   var base = 'https://breunigs.github.com/ingress-intel-total-conversion/dist/images/';
-  base = 'https://smile.crew.c-base.org/images/';
+  base = 'https://raw.github.com/dazz/iitc-plugins/master/upgradeablePortals/images/';
+
   L.Icon.Default.imagePath = base;
 
   window.iconL4 = L.Icon.Default.extend({options: { iconUrl: base + 'marker-L4.png' } });
