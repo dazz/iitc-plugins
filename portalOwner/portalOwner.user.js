@@ -44,7 +44,7 @@ window.plugin.portalOwner.updateLayer = function() {
   var minY = 0;
 
   var base = 'https://breunigs.github.com/ingress-intel-total-conversion/dist/images/';
-  base = 'https://smile.crew.c-base.org/images/';
+  base = 'https://raw.github.com/dazz/iitc-plugins/master/portalOwner/images/';
   L.Icon.Default.imagePath = base;
 
   window.iconRed = L.Icon.Default.extend({options: { iconUrl: base + 'marker-red.png' } });
