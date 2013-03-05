@@ -5,19 +5,22 @@ Der Wetterbericht für Berlin ist die Ausgabe aus einem Plugin für [IITC](https
 
 Eine Historie findet ihr hier: [wetterbericht für berlin](https://gist.github.com/dazz/bdcd6b4220563ee1483f)
 
-    der wetterbericht für 02.03.2013 18:01
-    [PDL|5]:        R(4):  3.88L|12kAP  E(1):  4.00L|2kAP
-    [GM|10]:        R(10): 3.66L|40kAP	E(0):  0.00L|0kAP
-    [ESG|23]:       R(18): 4.22L|50kAP	E(5):  3.27L|11kAP
-    [GS|38]:        R(12): 3.18L|27kAP	E(26): 3.04L|77kAP
-    [TP|10]:	    R(10): 5.58L|27kAP	E(0):  0.00L|0kAP
-    [PDP|42]:	    R(37): 4.21L|166kAP	E(5):  3.10L|12kAP
-    [SC|28]:	    R(28): 4.64L|96kAP	E(0):  0.00L|0kAP
-    [LG|44]:	    R(38): 2.79L|100kAP	E(6):  1.96L|13kAP
-    [GK|53]:	    R(23): 4.22L|66kAP	E(21): 3.98L|83kAP
-    [THF|17]:	    R(7):  4.64L|19kAP	E(8):  5.42L|19kAP
-    [NK|23]:	    R(18): 4.31L|61kAP	E(7):  4.29L|16kAP
-    [KOE|11]:	    R(7):  5.27L|28kAP  E(4):  3.25L|13kAP
+    der wetterbericht für 05.03.2013 9:28
+    [PDL|5]:    R(5):  4.42L|12kAP	E(0):  0.00L|0kAP
+    [GM|10]:	R(2):  3.56L|5kAP	E(8):  1.81L|21kAP
+    [ESG|23]:	R(22): 4.43L|79kAP	E(1):  3.63L|2kAP
+    [GS|38]:	R(20): 2.17L|46kAP	E(17): 1.22L|34kAP
+    [TP|10]:	R(0):  0.00L|0kAP	E(10): 4.35L|25kAP
+    [PDP|42]:	R(31): 4.04L|80kAP	E(11): 4.76L|34kAP
+    [SC|28]:	R(19): 3.74L|49kAP	E(9):  3.94L|20kAP
+    [LG|44]:	R(28): 2.36L|60kAP	E(16): 1.06L|31kAP
+    [GK|53]:	R(22): 4.32L|75kAP	E(22): 4.19L|58kAP
+    [THF|17]:	R(4):  3.19L|9kAP	E(13): 6.34L|31kAP
+    [NK|23]:	R(7):  4.64L|18kAP	E(16): 5.79L|65kAP
+    [KOE|11]:	R(10): 5.58L|42kAP	E(1):  2.25L|2kAP
+    [PKW|9]:	R(0):  0.00L|0kAP	E(9):  2.72L|21kAP
+    [VPF|14]:	R(11): 6.14L|37kAP	E(3):  2.75L|6kAP
+
 
 ### Wie ist der wetterbericht zu lesen:
 
@@ -52,6 +55,8 @@ Die Erleuchteten besetzen 31 Portale und haben diese durchschnittlich auf Level 
 * THF - Tempelhof
 * NK  - Neukölln
 * KOE - Köpenick
+* PKW - Pankow
+* VFH - Volkspark Friedrichshain
 
 ### Faction
 
