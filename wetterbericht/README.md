@@ -1,9 +1,13 @@
-![screenshot der areas](http://i.imgur.com/9hTP5LO.jpg)
-Die weißen Portale sind die gelisteten für die Areas.
+# Wetterbericht (für Berlin)
 
-Der Wetterbericht für Berlin ist die Ausgabe aus einem Plugin für [IITC](https://github.com/breunigs/ingress-intel-total-conversion/).
+* Fügt der Toolbox einen Link mit dem Text 'wetterbericht' hinzu. Beim Anklicken wird der Wetterbericht für die eingetragenen Areas als Alert und in der Console angezeigt.
+* Die Datei `wetterbericht-portals.user.js` enthält die Listen mit den Areas, die Datei `wetterbericht.user.js` ist das eigendliche Plugin. Funktioniert nur mit beiden Dateien. Ich habe es in zwei Dateien aufgeteilt, damit sich auch jeder seine eigenen Areas anlegen kann.
+* Die weißen Portale sind die gelisteten für die Areas
+* Eine Historie findet ihr hier: [wetterbericht für berlin](https://gist.github.com/dazz/bdcd6b4220563ee1483f)
+* Das Plugin ist in Kooperation von flyingmana(E), cmile(R) und mir(R)(dazs), entstanden. Ich hoffe auf weitere gute Zusammenarbeit!
+* viel Spaß und happy AP sammeln :)
 
-Eine Historie findet ihr hier: [wetterbericht für berlin](https://gist.github.com/dazz/bdcd6b4220563ee1483f)
+## So sieht's aus
 
     der wetterbericht für 05.03.2013 9:28
     [PDL|5]:    R(5):  4.42L|12kAP	E(0):  0.00L|0kAP
@@ -19,10 +23,10 @@ Eine Historie findet ihr hier: [wetterbericht für berlin](https://gist.github.c
     [NK|23]:	R(7):  4.64L|18kAP	E(16): 5.79L|65kAP
     [KOE|11]:	R(10): 5.58L|42kAP	E(1):  2.25L|2kAP
     [PKW|9]:	R(0):  0.00L|0kAP	E(9):  2.72L|21kAP
-    [VPF|14]:	R(11): 6.14L|37kAP	E(3):  2.75L|6kAP
+    [VFH|14]:	R(11): 6.14L|37kAP	E(3):  2.75L|6kAP
 
 
-### Wie ist der wetterbericht zu lesen:
+## Wie ist der wetterbericht zu lesen:
 
     [Area|Portal Anzahl insg.] Faction(anz. Portale): durschn. Level|max. kAP
 
@@ -41,7 +45,7 @@ Die Resistance besetzt davon 7 mit einem durchschnittlichen Level von 4.88, was 
 Die Erleuchteten besetzen 31 Portale und haben diese durchschnittlich auf Level 5.12 gebracht. Es würde dir 126.000 AP bringen diese wieder einzureißen, zu deployen und noch einiges mehr wenn du felder baust, also los!﻿
 
 
-### Areas
+## Areas
 
 * PDL - Platz der Luftbrücke
 * GM  - Gendarmenmarkt
@@ -58,7 +62,17 @@ Die Erleuchteten besetzen 31 Portale und haben diese durchschnittlich auf Level 
 * PKW - Pankow
 * VFH - Volkspark Friedrichshain
 
-### Faction
+## Faction
 
 * R - RESISTANCE
 * E - ENLIGHTENED
+
+## Was kann schiefgehen?
+
+Es werden beim Laden der Portale im Browser alle der Area entsprechenden Portal-Informationen gesammelt, wenn bei einer Area folgendes steht, wurden die Portale nicht geladen:
+
+    [PDL|0]:    R(0):  0.00LL|0kAP    E(0):  0.00L|0kAP
+
+## Le Screenshot
+
+![screenshot der areas](http://i.imgur.com/9hTP5LO.jpg)
