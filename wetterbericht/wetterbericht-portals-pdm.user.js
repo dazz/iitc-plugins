@@ -23,7 +23,7 @@ window.plugin.wetterberichtportals.city = function() {};
 window.plugin.wetterberichtportals.city.potsdam = function() {
   return {
     'areas': [ // select area(s) you want to see
-      'BB', 'NP', 'GB', 'PS'
+      'BB', 'NP', 'GB', 'PS', 'CY'
     ],
     'BB': {
       'portals': [
@@ -104,6 +104,28 @@ window.plugin.wetterberichtportals.city.potsdam = function() {
         '61e2189fe51747a5b3005355de755700.12', // Potsdam, Sanssouci.
         '83f9e9fde0c340e3908ff5a286884f90.12', // Sculpture, Sanssouci Park
         '53706d6336e14a6cb0e9f79c510a978c.12', // Sphinx etwas bitter
+      ]
+    },
+    'CY': {
+      'portals': [
+        '9deac577e9614dd7a1b70ff49eed1773.12', // Allemagne - Potsdam Film Museu
+        '5b9028927b084961a21fba47938667c7.11', // jahrhundertschritt von Wolfgan
+        '1a60c3a104824a6d96138e8af47a4d8e.12', // Potsdam-01  (ha_rk@gmx.net)
+        '9c767d85ecd54e77b1b6c3fc9424c37d.11', // Potsdam Obelisk
+        '46ce5bd63e784e7fad5514d6bc2c3a8f.11', // Bewegungsbild
+        '8e92ba87560a4ecc916cbb67ee5aa8c7.12', // Am alten Markt
+        'b453a47575a74755b7d5f40702789757.12', // Störende Plastik I (nicht mehr
+        '1f1b789e95cf42e5a960f70ad0d0042d.12', // Lustgarten - Potsdam
+        'a2b0b35a57bf4924927c72e793d63cfe.12', // Paar II
+        '16cafacece364ce69b8a8f7d930ac08b.12', // Störende Plastik III (nicht me
+        '29d2f70a0f8b4ab48b273a35398c88ab.12', // Potsdam-04   (ha_rk@gmx.net)
+        'a39931f8e8674e778068f0e35c11097d.12', // Berlin
+        'fd2c4813fc894fdd8981477108ca466c.12', // Heavenly music
+        'cafe041d481e468d95270abb5a149876.12', // Rathaus (alter Markt)
+        'cc477a9a07554ef1b763639c634d5ad8.12', // Regen
+        'e1b9b1fee337411e8137bcb29ac876b1.12', // Potsdam-05   (ha_rk@gmx.net)
+        '835a07a3c5124cda92e4352a22e7a0db.12', // Am neuen Markt
+        '32b758be05e2442bace8ad029875bd28.12', // Potsdam, Alter Markt
       ]
     },
 
