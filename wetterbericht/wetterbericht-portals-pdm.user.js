@@ -65,7 +65,7 @@ window.plugin.wetterberichtportals.city.potsdam = function() {
     },
     'BB': {
       'portals': [
-        '5ee7e12338994ef4b6b3c432461a79c2.12', // Schönheit der Architektur
+//        '5ee7e12338994ef4b6b3c432461a79c2.12', // Schönheit der Architektur
         '0d73412825f7424997d110cf3be5fcb0.11', // Bartgeist
         '7ce3f515dffb4e46b39329007d26bc36.11', // Litfaßsäule
         '6db4235242e044a8b25c716b0b45cbb8.11', // Neptun
