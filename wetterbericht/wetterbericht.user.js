@@ -60,7 +60,7 @@ function wrapper() {
               area_data[faction]['sum']   += window.getPortalLevel(d[2]);
               area_data[faction]['maxAP'] += window.getAttackApGain(d[2]).totalAp;
               
-              //window.plugin.wetterbericht.export.add(d);  // [1] collect all portals in list to filter double entries
+              window.plugin.wetterbericht.export.add(d);  // [1] collect all portals in list to filter double entries
             }
           }
           window.plugin.wetterbericht.export.add(d);     // [1]collect all the portals seen on map
