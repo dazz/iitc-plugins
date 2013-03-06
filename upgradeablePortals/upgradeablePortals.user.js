@@ -58,26 +58,34 @@ window.plugin.upgradeablePortals.updateLayer = function() {
   var iconL8 = new window.iconL8();
 
   var playerLevel = window.plugin.upgradeablePortals.getPlayerLevel();
+//  playerLevel = 8;
+  var nick = PLAYER.nickname;
+//  nick = "cmile";
+  var playerTeam = PLAYER.team;
+//  playerTeam = "RESISTANCE";
 
   $.each(window.portals, function(guid, portal) {
+    console.log(portal);
     var resoDict = {'8': 1, '7': 1, '6': 2, '5': 2, '4': 4, '3':4, '2':4, '1':8};
     var portalResos = [0,0,0,0,0,0,0,0,0];
     var j = 8;
     while(j > playerLevel) {
-      resodict[''+j--] = 0;
+      resoDict[''+j--] = 0;
     }
 
-    var nick = PLAYER.nickname;
     var levelsum = 0;
     var playerResos = resoDict;
     var resocount = 8;
+    var playerResocount = 0;
 
-    if (portal.options.details.controllingTeam.team === PLAYER.team) {
+    if (portal.options.details.controllingTeam.team === playerTeam) {
 
       $.each(portal.options.details.resonatorArray.resonators, function(ind, reso) {
         if(reso !== null) {
           if(getPlayerName(reso.ownerGuid) === nick){
             playerResos[''+reso.level]--;
+            playerResocount++;
+            levelsum += reso.level;
           } else {
             portalResos[reso.level]++;
           }
@@ -87,7 +95,7 @@ window.plugin.upgradeablePortals.updateLayer = function() {
       });
 
       var resoString = "";
-      resoCount = 0;
+      resoCount = playerResocount;
 
       $.each(portalResos, function(ind, reso) {
         while(reso>0){
@@ -113,7 +121,9 @@ window.plugin.upgradeablePortals.updateLayer = function() {
         }
       });
 
+
       var possibleLevel = levelsum / resocount;
+
       if(possibleLevel >= playerLevel-1) {
         var currentIcon;
         if(possibleLevel >= 8) {
