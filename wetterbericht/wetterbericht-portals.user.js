@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             iitc-plugin-wetterbericht-portals@dazz
 // @name           iitc: wetterbericht-portals
-// @version        0.0.1
+// @version        0.1.0
 // @namespace      https://github.com/breunigs/ingress-intel-total-conversion
 // @updateURL      https://github.com/dazz/iitc-plugins/wetterbericht/wetterbericht-portals.user.js
 // @downloadURL    https://github.com/dazz/iitc-plugins/wetterbericht/wetterbericht-portals.user.js
