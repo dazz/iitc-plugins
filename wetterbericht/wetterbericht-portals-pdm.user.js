@@ -23,7 +23,7 @@ window.plugin.wetterberichtportals.city = function() {};
 window.plugin.wetterberichtportals.city.potsdam = function() {
   return {
     'areas': [ // select area(s) you want to see
-      'BB', 'NP', 'GB'
+      'BB', 'NP', 'GB', 'PS'
     ],
     'BB': {
       'portals': [
@@ -66,6 +66,34 @@ window.plugin.wetterberichtportals.city.potsdam = function() {
         '4435bfda3ad349c38ec95f7149537dcb.12', // Glienicker Brücke-Potsdam-2008
       ]
     },
+    'PS': {
+      'portals': [
+        '978fc04c0d6e4fedb3149af86bc561e8.12', // Historische Mühle von Sanssouc
+        '59a638646aaf4a5288a407a0996a5642.12', // Sansousi
+        '3e8b33ba304246bd8196feb1219900cc.12', // CK Orangerie
+        '6a2d5b4b5c864f5b9898c03bd2f9bd58.12', // Potsdam - Orangerieschloss (Ne
+        '3500e375ee564f098c01ebb225da94ee.12', // Parque Sanssouci - POTSDAM ,
+        '2e58d53b4bd14278b8f43cce4422ba3b.11', // Orangeri
+        '940c3dcd856046438f07b224a0431061.12', // CK Bogenschützer
+        'fe39015c452c4c92abea2733ade43e3e.12', // Schloss Sanssouci
+        '325cbe8dd6a44ae4ba037a92a50db0c2.12', // Engel
+        '9b58d2ffd99348ae9282793f9fb787c0.12', // Studying in Potsdam, Germany
+        'f0236d90d9ff40528555ffb2b6d4f78d.12', // Park Sanssouci
+        '459c5ddcdf2e49ca8b5a8060e1d4cb42.12', // Statue, Sanssouci Park
+        '3d60f98b0962452685a379f271a135ee.12', // Potsdam - Park Sanssouci
+        '9c24b6db63ff4ed8b79ccab9a6eaa17a.12', // Statue über Weinterrassen und
+        '9ff5007d5f774b4c98b92f9f289d6712.12', // Potsdam, Sanssouci.
+        'b2c0bcbfc5e14b07a4f5ca5932cb7bd1.12', // [Untitled]
+        'bf41b66a9a35463995f7f331b9e71b6e.12', // Sanssouci Castle, Sanssouci Pa
+        '5543192a130d45aab6712933ec01b830.12', // Schlosspark Sanssouci
+        'c09ed42b48cf41588f893d03926240d2.12', // [Untitled]
+        '7e65c9b48bdd424c9cad61bd523aa659.12', // Schlosspark Sanssouci
+        '5e199b44188f4412ba0ba8ac138cb5f5.12', // Mühle am Schloss Sanssouci - P
+        'e286a395d5d649df9f694acf65baea44.11', // Schloss San Soucis
+        'd5491c3046de4e8abddb19b6057e23c7.12', // Pavillion am Schloss - Potsdam
+        '002578cccd1c4fe5b77361efdd34cff4.12', // Potsdam - Sanssouci   (ha_rk@g
+        ]
+      },
 
 //      '': {
 //        'portals': [
