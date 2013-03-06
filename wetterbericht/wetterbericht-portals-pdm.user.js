@@ -25,7 +25,7 @@ window.plugin.wetterberichtportals.city.potsdam = function() {
     'areas': [ // select area(s) you want to see
       'CP', 'BB', 'GB', 'PS', 'NP'
     ],
-    'CY': {
+    'CP': {
       'portals': [
         '9deac577e9614dd7a1b70ff49eed1773.12', // Allemagne - Potsdam Film Museu
         '5b9028927b084961a21fba47938667c7.11', // jahrhundertschritt von Wolfgan
