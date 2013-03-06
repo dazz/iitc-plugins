@@ -2,8 +2,8 @@
 // @id             upgradeablePortals@smilodazsprod
 // @name           iitc: upgradeablePortals
 // @version        0.2
-// @updateURL      https://raw.github.com/dazz/iitc-plugins/gh-pages/plugins/upgradeablePortals.user.js
-// @downloadURL    https://raw.github.com/dazz/iitc-plugins/gh-pages/plugins/upgradeablePortals.user.js
+// @updateURL      https://github.com/dazz/iitc-plugins/raw/master/upgradeablePortals/upgradeablePortals.user.js
+// @downloadURL    https://github.com/dazz/iitc-plugins/raw/master/upgradeablePortals/upgradeablePortals.user.js
 // @description    Shows marker on portals that can be upgraded to at least player level - 1
 // @include        https://www.ingress.com/intel*
 // @match          https://www.ingress.com/intel*
