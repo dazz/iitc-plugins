@@ -92,8 +92,13 @@ window.plugin.wetterberichtportals.city.potsdam = function() {
         'e286a395d5d649df9f694acf65baea44.11', // Schloss San Soucis
         'd5491c3046de4e8abddb19b6057e23c7.12', // Pavillion am Schloss - Potsdam
         '002578cccd1c4fe5b77361efdd34cff4.12', // Potsdam - Sanssouci   (ha_rk@g
-        ]
-      },
+        '91ff8102954a4f7f90d5aa53c5c1ff4a.12', // China pavillion
+        '7047758558f7432db9c110b94c38bdd2.12', // Berlin
+        '352a8cd8c595411f8e11e74a77d39077.12', // Casa China ,  Parque Sanssouci
+        '891de0d6c08d4f339b1458aa29e3093a.12', // Casa China ,  Park Sanssouci -
+        '274e088b80d1433e96206bf7900fddfd.12', // China pavillion
+      ]
+    },
 
 //      '': {
 //        'portals': [
