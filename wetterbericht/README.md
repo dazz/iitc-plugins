@@ -68,11 +68,28 @@ Die Erleuchteten besetzen 31 Portale und haben diese durchschnittlich auf Level 
 * R - RESISTANCE
 * E - ENLIGHTENED
 
+
+## Eigene Areas hinzufügen
+
+Im Script [wetterbericht.user.js](https://github.com/dazz/iitc-plugins/blob/master/wetterbericht/wetterbericht.user.js) gibt es eine Export-Funktionalität.
+
+    [63] //window.plugin.wetterbericht.export.add(d);  // [1] collect all portals in list to filter double entries
+    [66] //window.plugin.wetterbericht.export.add(d);  // [1] collect all the portals seen on map
+    [69] //window.plugin.wetterbericht.export.log();   // [2] dump to console
+
+Wenn man auf einen Bereich der Karte zoomt und dann [1] und [2] einkommentiert werden auf Konsole die Portale ausgegeben.
+
+Die Liste dann kopieren und in [wetterbericht-portals.user.js](https://github.com/dazz/iitc-plugins/blob/master/wetterbericht/wetterbericht-portals.user.js) eintragen und speichern. Nach einem Refresh sollten die Portale mit einer weißen Füllung angezeigt werden.
+
+Das Kürzel nicht vergessen. Und an mich schicken :)
+
 ## Was kann schiefgehen?
 
-Es werden beim Laden der Portale im Browser alle der Area entsprechenden Portal-Informationen gesammelt, wenn bei einer Area folgendes steht, wurden die Portale nicht geladen:
+* Es werden beim Laden der Portale im Browser alle der Area entsprechenden Portal-Informationen gesammelt, wenn bei einer Area folgendes steht, wurden die Portale nicht geladen:
 
     [PDL|0]:    R(0):  0.00LL|0kAP    E(0):  0.00L|0kAP
+    
+* Es wurden nicht beide Dateien als UserScript im Browser geladen
 
 ## Le Screenshot
 
