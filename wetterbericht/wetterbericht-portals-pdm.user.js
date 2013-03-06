@@ -23,7 +23,7 @@ window.plugin.wetterberichtportals.city = function() {};
 window.plugin.wetterberichtportals.city.potsdam = function() {
   return {
     'areas': [ // select area(s) you want to see
-      'BB', 'NP'
+      'BB', 'NP', 'GB'
     ],
     'BB': {
       'portals': [
@@ -54,6 +54,19 @@ window.plugin.wetterberichtportals.city.potsdam = function() {
         '283dbfcbe7074bd292d670ea0a6eb59f.12', // Neue Palais - Potsdam - Kandel
       ]
     },
+    'GB': {
+      'portals': [
+        '4c193f05308f48ccab4edb8b71631625.12', // Milchmädchen-Brunnen im Schlos
+        '4807a52771554b5fb8993d22850fab2b.12', // Casino Klein-Glienicke von F.
+        'f528905072f04c838e4321a221360f26.12', // Löwenfontäne im Schlosspark Gl
+        'f6c8322099f64be18bcd7917428ee906.12', // Glienicker Park, Greif
+        '75419c678b9b4773b40662fca4efee0b.11', // Stein im Glienicker Volkspark
+        'a3ced1b241b94cf69fe332c29914bf13.12', // Schloss Glienicke mit Neptunbr
+        'e0e24a6220134654a31494d95091b2c4.12', // Un tritone
+        '4435bfda3ad349c38ec95f7149537dcb.12', // Glienicker Brücke-Potsdam-2008
+      ]
+    },
+
 //      '': {
 //        'portals': [
 //
