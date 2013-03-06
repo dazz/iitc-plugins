@@ -1,5 +1,7 @@
 # portalOwner
 
+Shows red marker where player is owner of a portal and a yellow marker if player has resos in a portal.
+
 ## Legende
 
 ![gelb](https://raw.github.com/dazz/iitc-plugins/master/portalOwner/images/marker-yellow.png) Resonatoren deployt
