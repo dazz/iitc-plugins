@@ -15,6 +15,6 @@ Bemerkungen am Anfang:
 ## Plugins
 
 * [wetterbericht](https://github.com/dazz/iitc-plugins/tree/master/wetterbericht): Der Wetterbericht für Berlin
-* portalOwner: 
-* upgradeablePortals: 
+* [portalOwner](https://github.com/dazz/iitc-plugins/tree/master/portalOwner): Welche Resonatoren und Portale wurden von mir bestückt
+* [upgradeablePortals](https://github.com/dazz/iitc-plugins/tree/master/upgradeablePortals): Portal-Anzeige welche upgradebar sind
 
