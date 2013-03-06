@@ -97,6 +97,13 @@ window.plugin.wetterberichtportals.city.potsdam = function() {
         '352a8cd8c595411f8e11e74a77d39077.12', // Casa China ,  Parque Sanssouci
         '891de0d6c08d4f339b1458aa29e3093a.12', // Casa China ,  Park Sanssouci -
         '274e088b80d1433e96206bf7900fddfd.12', // China pavillion
+        'b505cbb91943442099ec44d84069af11.12', // Park Sanssouci - Orangerie
+        '38ce9823423e4770927398b6c59b8437.12', // Friedrich der Große und Orange
+        '82bb405fb799448d8572b6bd9a49a4dd.12', // Orangery Palace - Frederick th
+        '5deebd18040945d598b3d7d50a220b0a.12', // Friedenskirche - Park Sanssouc
+        '61e2189fe51747a5b3005355de755700.12', // Potsdam, Sanssouci.
+        '83f9e9fde0c340e3908ff5a286884f90.12', // Sculpture, Sanssouci Park
+        '53706d6336e14a6cb0e9f79c510a978c.12', // Sphinx etwas bitter
       ]
     },
 
