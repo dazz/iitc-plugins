@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             iitc-plugin-wetterbericht-portals@dazz
 // @name           iitc: wetterbericht-portals
-// @version        0.1.0
+// @version        0.1.1
 // @namespace      https://github.com/breunigs/ingress-intel-total-conversion
 // @updateURL      https://github.com/dazz/iitc-plugins/raw/master/wetterbericht/wetterbericht-portals.user.js
 // @downloadURL    https://github.com/dazz/iitc-plugins/raw/master/wetterbericht/wetterbericht-portals.user.js
@@ -22,7 +22,21 @@ window.plugin.wetterberichtportals = function() {};
 window.plugin.wetterberichtportals.city = function() {};
 window.plugin.wetterberichtportals.city.berlin = function() {
   return {
-    'areas': ['PDL', 'GM', 'ESG', 'GS', 'TP', 'PDP', 'SC', 'LG', 'GK', 'THF', 'NK', 'KOE', 'PKW', 'VFH'], // select area(s) you want to see
+    'areas': [ // select area(s) you want to see
+      'PDL', 'GM', 'ESG', 'GS', 'TP', 'PDP', 'SC', 'LG', 'GK', 
+      'THF', 'NK', 'KOE', 'PKW', 'VFH', 'CC'
+    ],
+    'CC': {
+      'portals': [
+        '8fbe5b0690ec41008a6ce9fd4ef384c0.12', // Checkpoint Charlie Site
+        '315659248b104a98a8a21fdb7fb591ea.12', // Berlijn2
+        'c0d96ad184334b1c961f7135404243b9.12', // Чекпойнт Чарли
+        'dcdc183fedc142fe940ecfe40e77ae4c.12', // Berlin Checkpoint Charlie
+        '59782084f1df4bad8350b9853fbd83ca.12', // "Berliner Mauer"
+        'e1d813ca03394b93bb63a4b7c835ed42.12', // House Ball by Claes Oldenburg 
+        '329f1fa4188f48428daa8aa74e61e8ff.12', // Oldenburg/van Bruggen: Houseba
+      ]
+    },
     'PDL': {
       'portals': [
         'cb8f749054c8403f92d51afd3484cb25.12', // Airfild Memorial
