@@ -51,6 +51,7 @@ window.plugin.wetterberichtportals.city.potsdam = function() {
         '14166a9669314e56b7754500f13a5918.12', // Symbiose
         'a2ffe85be95b460e8631308b9486f56b.12', // das Neue Palais am Morgen
         'dfe9ac39f92f418cbb2de7ec54b94d76.12', // Blick durch die Kastanien
+        '283dbfcbe7074bd292d670ea0a6eb59f.12', // Neue Palais - Potsdam - Kandel
       ]
     },
 //      '': {
