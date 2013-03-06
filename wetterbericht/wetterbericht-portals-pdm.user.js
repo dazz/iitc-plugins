@@ -27,22 +27,30 @@ window.plugin.wetterberichtportals.city.potsdam = function() {
     ],
     'BB': {
       'portals': [
-        '8fbe5b0690ec41008a6ce9fd4ef384c0.12', // Bahnhof Babelsberg
-        '315659248b104a98a8a21fdb7fb591ea.12', // Berlijn2
-        'c0d96ad184334b1c961f7135404243b9.12', // Чекпойнт Чарли
-        'dcdc183fedc142fe940ecfe40e77ae4c.12', // Berlin Checkpoint Charlie
-        '59782084f1df4bad8350b9853fbd83ca.12', // "Berliner Mauer"
-        'e1d813ca03394b93bb63a4b7c835ed42.12', // House Ball by Claes Oldenburg
-        '329f1fa4188f48428daa8aa74e61e8ff.12', // Oldenburg/van Bruggen: Houseba
+        '5ee7e12338994ef4b6b3c432461a79c2.12', // Schönheit der Architektur
+        '0d73412825f7424997d110cf3be5fcb0.11', // Bartgeist
+        '7ce3f515dffb4e46b39329007d26bc36.11', // Litfaßsäule
+        '6db4235242e044a8b25c716b0b45cbb8.11', // Neptun
+        'e57a9aa905304b158e264f542b5c1e36.11', // Backsteintor
+        '7df3410f21004e3e94e1e218e00b540c.11', // Bahnhof Babelsberg
       ]
     },
     'NP': {
       'portals': [
-        'cb8f749054c8403f92d51afd3484cb25.12', // Airfild Memorial
-        'b231c2c7aab048f29a9413ef77db6253.12', // die Luftbrücke
-        '645fc1daea0043de8e244e8bc7fd629a.12', // Berlin Airlift Monument by Edu
-        '4870a2296861446bbc1d0809146dd89b.12', // Tempelhof
-        '3fe78a5b37b14687818d3ee535ff2d5e.12', // Luftbruecke monument
+        'dbad657ebe354e1cb4cf710124022a13.12', // Neues Palais
+        'aed42d91fdc04e238f826c0ac7fee4ab.12', // Sanssouci Park
+        '1f35e5cb0eef462ba49be07eaff2f027.12', // Viktoria im Park
+        '9f68979a62984a2284188ac4e50b6799.12', // Park Sanssouci - Neues Palais
+        '2c26250db6bf4438a1949696cd464ba9.11', // Freundschaftstempel im Park Sa
+        '04e4a834268d46b293406d94fa98b2f9.12', // Universität Potsdam am Schloss
+        '4cc4e24bd42348b8b95656b390654aff.12', // Neues Palais, Potsdam-Sanssouc
+        '22ce8b467196446f889104ccba27d12c.12', // Neues Palais im Park Sanssouci
+        'b22519f2a0ee4fef8d62cb7e98bc8e15.12', // Potsdam - Neues Palais
+        'ef96b28d877e49af9952a84b056f9a31.12', // Neues Palais im Park Sanssouci
+        '3f16528ed033461b89aaada66bd2833c.12', // Neues Palais, Potsdam-Sanssouc
+        '14166a9669314e56b7754500f13a5918.12', // Symbiose
+        'a2ffe85be95b460e8631308b9486f56b.12', // das Neue Palais am Morgen
+        'dfe9ac39f92f418cbb2de7ec54b94d76.12', // Blick durch die Kastanien
       ]
     },
 //      '': {
