@@ -77,7 +77,7 @@ function wrapper() {
   window.plugin.wetterbericht.export = function() {}; 
   
   window.plugin.wetterbericht.export.string = ''; // le string
-  window.plugin.wetterbericht.export.dump = {};   // collection of portals
+    window.plugin.wetterbericht.export.dump = {};   // collection of portals
     
   window.plugin.wetterbericht.export.push = function(s) {
     window.plugin.wetterbericht.export.string += s;
@@ -121,19 +121,25 @@ function wrapper() {
     
     var factions = {'RESISTANCE':'R','ALIENS':'E'};
     var s = 'Der wetterbericht für ' + window.plugin.wetterbericht.datetime() + '\n';
+    var forXml = ''; // PDL,5,4,1.09,7k,0,0.00,0k
     $.each(window.plugin.wetterbericht.result, function(area, area_data) {
       var anzP = window.plugin.wetterberichtportals.city['potsdam']()[area].portals.length;
       s += '[' + area + '|' + anzP + ']:';
+      forXml += area + ','+anzP; 
       $.each(area_data, function(faction, value) {
         //console.log(value);
         var numP  = Object.keys(value.portals).length;
         var level = (numP>0) ? (value.sum/numP).toFixed(2) : '0.00';
-        s += '\t' + factions[faction] + '('+numP+'): ' + level + 'L|'+ (value.maxAP/1000).toFixed(0) + 'kAP';
+        var maxAP = (value.maxAP/1000).toFixed(0);
+        s += '\t' + factions[faction] + '('+numP+'): ' + level + 'L|'+ maxAP + 'kAP';
+        forXml += + ',' + numP + ',' + level + ',' + maxAP + 'k'
       });
       s += '\n';
+      forXml += '\n';
     });
     s += '\nLink zur Erklärung: http://tinyurl.com/iwb-legende';
     console.log(s);
+    // console.log(forXml);
     alert(s);
   };
 
