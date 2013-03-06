@@ -132,7 +132,7 @@ function wrapper() {
       });
       s += '\n';
     });
-    s += '\nlink zur erklärung: http://tinyurl.com/iwb-legende';
+    s += '\nLink zur Erklärung: http://tinyurl.com/iwb-legende';
     console.log(s);
     alert(s);
   };
