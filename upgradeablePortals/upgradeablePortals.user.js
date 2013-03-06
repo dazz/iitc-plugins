@@ -1,9 +1,9 @@
 // ==UserScript==
 // @id             upgradeablePortals@smilodazsprod
 // @name           iitc: upgradeablePortals
-// @version        0.1
-// @updateURL      https://raw.github.com/dazz/iitc-plugins/gh-pages/plugins/upgradeablePortals.user.js
-// @downloadURL    https://raw.github.com/dazz/iitc-plugins/gh-pages/plugins/upgradeablePortals.user.js
+// @version        0.2
+// @updateURL      https://github.com/dazz/iitc-plugins/raw/master/upgradeablePortals/upgradeablePortals.user.js
+// @downloadURL    https://github.com/dazz/iitc-plugins/raw/master/upgradeablePortals/upgradeablePortals.user.js
 // @description    Shows marker on portals that can be upgraded to at least player level - 1
 // @include        https://www.ingress.com/intel*
 // @match          https://www.ingress.com/intel*
@@ -30,9 +30,8 @@ window.plugin.upgradeablePortals._updating = false;
 window.plugin.upgradeablePortals._renderLimitReached = false;
 
 window.plugin.upgradeablePortals.updateLayer = function() {
-  if (window.plugin.upgradeablePortals._updating ||
-      window.plugin.upgradeablePortals.layer === null ||
-      !window.map.hasLayer(window.plugin.upgradeablePortals.layer))
+  if (!window.map.hasLayer(window.plugin.upgradeablePortals.layer) || window.plugin.upgradeablePortals._updating ||
+      window.plugin.upgradeablePortals.layer === null)
     return;
   window.plugin.upgradeablePortals._updating = true;
   window.plugin.upgradeablePortals.layer.clearLayers();
@@ -62,8 +61,8 @@ window.plugin.upgradeablePortals.updateLayer = function() {
 
   $.each(window.portals, function(guid, portal) {
     var resoDict = {'8': 1, '7': 1, '6': 2, '5': 2, '4': 4, '3':4, '2':4, '1':8};
+    var portalResos = [0,0,0,0,0,0,0,0,0];
     var j = 8;
-
     while(j > playerLevel) {
       resodict[''+j--] = 0;
     }
@@ -76,28 +75,41 @@ window.plugin.upgradeablePortals.updateLayer = function() {
     if (portal.options.details.controllingTeam.team === PLAYER.team) {
 
       $.each(portal.options.details.resonatorArray.resonators, function(ind, reso) {
-        if(reso !== null && getPlayerName(reso.ownerGuid) === nick){
-          playerResos[''+reso.level]--;
-        }
-      });
-      var portalLevel = levelsum / resocount;
-
-      var resoString = "";
-      $.each(portal.options.details.resonatorArray.resonators, function(ind, reso) {
-        var nextReso = 8;
-        while(playerResos[''+nextReso] <= 0){
-          nextReso--;
-        }
-        if (reso === null || (reso !== null && reso.level < nextReso)) {
-          playerResos[''+nextReso]--;
-          levelsum += nextReso;
-          if (resoString === "") {
-            resoString = '' + nextReso;
+        if(reso !== null) {
+          if(getPlayerName(reso.ownerGuid) === nick){
+            playerResos[''+reso.level]--;
           } else {
-            resoString += ', ' + nextReso;
+            portalResos[reso.level]++;
           }
         } else {
-          levelsum += reso.level;
+          portalResos[0]++;
+        }
+      });
+
+      var resoString = "";
+      resoCount = 0;
+
+      $.each(portalResos, function(ind, reso) {
+        while(reso>0){
+          var nextReso = 8;
+          while(playerResos[''+nextReso] <= 0){
+            nextReso--;
+          }
+          if (ind < nextReso) {
+            playerResos[''+nextReso]--;
+            levelsum += nextReso;
+            if (resoString === "") {
+              resoString = '' + nextReso;
+            } else {
+              resoString += ', ' + nextReso;
+            }
+          } else {
+            levelsum += ind;
+          }
+          reso--;
+          if(ind > 0) {
+            resoCount++;
+          }
         }
       });
 
@@ -180,4 +192,5 @@ if(window.iitcLoaded && typeof setup === 'function') {
 var script = document.createElement('script');
 script.appendChild(document.createTextNode('('+ wrapper +')();'));
 (document.body || document.head || document.documentElement).appendChild(script);
+
 
