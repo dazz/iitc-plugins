@@ -83,6 +83,7 @@ window.plugin.wetterberichtportals.city.potsdam = function() {
         'a3ced1b241b94cf69fe332c29914bf13.12', // Schloss Glienicke mit Neptunbr
         'e0e24a6220134654a31494d95091b2c4.12', // Un tritone
         '4435bfda3ad349c38ec95f7149537dcb.12', // Glienicker Brücke-Potsdam-2008
+        '24d17b268e014e2d9dc85aba6ac8437d.11', // San Antionio de Padua Chapel
       ]
     },
     'PS': {
