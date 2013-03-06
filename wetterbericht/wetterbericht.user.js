@@ -3,8 +3,8 @@
 // @name           iitc: wetterbericht
 // @version        0.1.0
 // @namespace      https://github.com/breunigs/ingress-intel-total-conversion
-// @updateURL      https://github.com/dazz/iitc-plugins/raw/master/wetterbericht/wetterbericht.user.js
-// @downloadURL    https://github.com/dazz/iitc-plugins/raw/master/wetterbericht/wetterbericht.user.js
+// @updateURL      https://github.com/thiasb/iitc-plugins/raw/master/wetterbericht/wetterbericht.user.js
+// @downloadURL    https://github.com/thiasb/iitc-plugins/raw/master/wetterbericht/wetterbericht.user.js
 // @description    wetterbericht
 // @include        *://www.ingress.com/intel*
 // @match          *://www.ingress.com/intel*
@@ -34,7 +34,7 @@ function wrapper() {
     
     var p = data.portals;
     
-    var citydata = window.plugin.wetterberichtportals.city['berlin']();
+    var citydata = window.plugin.wetterberichtportals.city['potsdam']();
     var areas = citydata.areas;
     $.each(areas, function(ind, area) {
       var area_data;
@@ -63,10 +63,10 @@ function wrapper() {
               //window.plugin.wetterbericht.export.add(d);  // [1] collect all portals in list to filter double entries
             }
           }
-          //window.plugin.wetterbericht.export.add(d);     // [1]collect all the portals seen on map
+          window.plugin.wetterbericht.export.add(d);     // [1]collect all the portals seen on map
         });
       });
-      //window.plugin.wetterbericht.export.log();         // [2] dump to console
+      window.plugin.wetterbericht.export.log();         // [2] dump to console
 
       window.plugin.wetterbericht.result[area] = area_data;
 
@@ -122,7 +122,7 @@ function wrapper() {
     var factions = {'RESISTANCE':'R','ALIENS':'E'};
     var s = 'der wetterbericht für ' + window.plugin.wetterbericht.datetime() + '\n';
     $.each(window.plugin.wetterbericht.result, function(area, area_data) {
-      var anzP = window.plugin.wetterberichtportals.city['berlin']()[area].portals.length;
+      var anzP = window.plugin.wetterberichtportals.city['potsdam']()[area].portals.length;
       s += '[' + area + '|' + anzP + ']:';
       $.each(area_data, function(faction, value) {
         //console.log(value);
