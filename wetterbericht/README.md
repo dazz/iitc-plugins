@@ -7,6 +7,11 @@
 * Das Plugin ist in Kooperation von flyingmana(E), cmile(R) und mir(R)(dazs), entstanden. Ich hoffe auf weitere gute Zusammenarbeit!
 * viel Spaß und happy AP sammeln :)
 
+## Install
+
+1. [wetterbericht-portals.user.js](https://github.com/dazz/iitc-plugins/raw/master/wetterbericht/wetterbericht-portals.user.js)
+2. [wetterbericht.user.js](https://github.com/dazz/iitc-plugins/raw/master/wetterbericht/wetterbericht.user.js)
+
 ## So sieht's aus
 
     der wetterbericht für 05.03.2013 9:28
