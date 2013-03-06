@@ -3,8 +3,8 @@
 // @name           iitc: wetterbericht-portals-pdm
 // @version        0.1.1
 // @namespace      https://github.com/breunigs/ingress-intel-total-conversion
-// @updateURL      https://github.com/thiasb/iitc-plugins/raw/master/wetterbericht/wetterbericht-portals-pdm.user.js
-// @downloadURL    https://github.com/thiasb/iitc-plugins/raw/master/wetterbericht/wetterbericht-portals-pdm.user.js
+// @updateURL      https://github.com/thiasb/iitc-plugins/raw/Potsdam/wetterbericht/wetterbericht-portals-pdm.user.js
+// @downloadURL    https://github.com/thiasb/iitc-plugins/raw/Potsdam/wetterbericht/wetterbericht-portals-pdm.user.js
 // @description    wetterbericht-portals-pdm
 // @include        *://www.ingress.com/intel*
 // @match          *://www.ingress.com/intel*
