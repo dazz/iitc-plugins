@@ -61,6 +61,7 @@ Die Erleuchteten besetzen 31 Portale und haben diese durchschnittlich auf Level 
 * KOE - Köpenick
 * PKW - Pankow
 * VFH - Volkspark Friedrichshain
+* CC  - Checkpoint Charlie
 
 ## Faction
 
