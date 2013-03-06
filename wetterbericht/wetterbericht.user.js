@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             iitc-plugin-wetterbericht@dazz
 // @name           iitc: wetterbericht
-// @version        0.1.0
+// @version        0.1.1
 // @namespace      https://github.com/breunigs/ingress-intel-total-conversion
 // @updateURL      https://github.com/thiasb/iitc-plugins/raw/Potsdam/wetterbericht/wetterbericht.user.js
 // @downloadURL    https://github.com/thiasb/iitc-plugins/raw/Potsdam/wetterbericht/wetterbericht.user.js
@@ -120,7 +120,7 @@ function wrapper() {
   window.plugin.wetterbericht.show = function() {
     
     var factions = {'RESISTANCE':'R','ALIENS':'E'};
-    var s = 'der wetterbericht für ' + window.plugin.wetterbericht.datetime() + '\n';
+    var s = 'Der wetterbericht für ' + window.plugin.wetterbericht.datetime() + '\n';
     $.each(window.plugin.wetterbericht.result, function(area, area_data) {
       var anzP = window.plugin.wetterberichtportals.city['potsdam']()[area].portals.length;
       s += '[' + area + '|' + anzP + ']:';
