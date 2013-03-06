@@ -97,5 +97,5 @@ Das Kürzel nicht vergessen. Und an mich schicken :)
 * Es wurden nicht beide Dateien als UserScript im Browser geladen
 
 ## Le Screenshot
-
+![link zum wetterbericht](http://i.imgur.com/45DjLLA.jpg)
 ![screenshot der areas](http://i.imgur.com/9hTP5LO.jpg)
