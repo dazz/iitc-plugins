@@ -23,8 +23,46 @@ window.plugin.wetterberichtportals.city = function() {};
 window.plugin.wetterberichtportals.city.potsdam = function() {
   return {
     'areas': [ // select area(s) you want to see
-      'BB', 'NP', 'GB', 'PS', 'CY'
+      'CP', 'BB', 'GB', 'PS', 'NP'
     ],
+    'CY': {
+      'portals': [
+        '9deac577e9614dd7a1b70ff49eed1773.12', // Allemagne - Potsdam Film Museu
+        '5b9028927b084961a21fba47938667c7.11', // jahrhundertschritt von Wolfgan
+        '1a60c3a104824a6d96138e8af47a4d8e.12', // Potsdam-01  (ha_rk@gmx.net)
+        '46ce5bd63e784e7fad5514d6bc2c3a8f.11', // Bewegungsbild
+        '8e92ba87560a4ecc916cbb67ee5aa8c7.12', // Am alten Markt
+        'b453a47575a74755b7d5f40702789757.12', // Störende Plastik I (nicht mehr
+        '1f1b789e95cf42e5a960f70ad0d0042d.12', // Lustgarten - Potsdam
+        'a2b0b35a57bf4924927c72e793d63cfe.12', // Paar II
+        '16cafacece364ce69b8a8f7d930ac08b.12', // Störende Plastik III (nicht me
+        '29d2f70a0f8b4ab48b273a35398c88ab.12', // Potsdam-04   (ha_rk@gmx.net)
+        'a39931f8e8674e778068f0e35c11097d.12', // Berlin
+        'fd2c4813fc894fdd8981477108ca466c.12', // Heavenly music
+        'cafe041d481e468d95270abb5a149876.12', // Rathaus (alter Markt)
+        'cc477a9a07554ef1b763639c634d5ad8.12', // Regen
+        'e1b9b1fee337411e8137bcb29ac876b1.12', // Potsdam-05   (ha_rk@gmx.net)
+        '835a07a3c5124cda92e4352a22e7a0db.12', // Am neuen Markt
+        '32b758be05e2442bace8ad029875bd28.12', // Potsdam, Alter Markt
+        '2d7eb8327a7f4c3eaec2bfee1d7ee23e.12', // Pause
+        'd69f1aaab5b041eb87d2c560dbf0e4ae.12', // Brunnen - Freundschaftsinsel
+        '21b1d7a0f7554ca28f950c13a6aac40c.12', // aufstrebend I
+        '4d6f5ddf9cda42c5b0e0b78475eb7a9e.12', // aufstrebend II
+        '9335ac1869a64eeba02d35c3a0402e70.11', // Bürgerhaus am Eck
+        'bca1c5dadee949eeb636cd73c962a511.11', // Basilika im Nebel
+        'a463d9dfd1ff4a7a8b7cc7b99badd543.11', // Kämpferruhe
+        'c2398cf6c094454ead3f193733278be1.12', // Potsdam - Holländisches Vierte
+        '7ab8260a584a4ab98a1566ae68af8d38.11', // Stahlflammen
+        'd2a68ff53ba54208a9a2eb56b8079545.11', // Standort erstörte Synagoge
+        '9ad5e683bfde41f59471db8c862b56e3.11', // WilhelmsGalle
+        '3be12aac4ea847029e342cae357c0a69.12', // Kunstgebilde
+        '096945b1495648f49982fff9f7aad408.11', // MarmorTeleport
+        '0997b6050bba47ae8ec3e3d6bdb009e7.12', // Mask
+        'd5fe07b5f5bf4ac485b53fb403237e27.12', // Nauener Tor 1972
+        'cff942509f494aa2a411ff98d2e80a6d.12', // Detail on Nauener Tor
+        'fccb8ce35c88456cbb166bc9c939484d.11', // Nauener Tor
+      ]
+    },
     'BB': {
       'portals': [
         '5ee7e12338994ef4b6b3c432461a79c2.12', // Schönheit der Architektur
@@ -33,25 +71,6 @@ window.plugin.wetterberichtportals.city.potsdam = function() {
         '6db4235242e044a8b25c716b0b45cbb8.11', // Neptun
         'e57a9aa905304b158e264f542b5c1e36.11', // Backsteintor
         '7df3410f21004e3e94e1e218e00b540c.11', // Bahnhof Babelsberg
-      ]
-    },
-    'NP': {
-      'portals': [
-        'dbad657ebe354e1cb4cf710124022a13.12', // Neues Palais
-        'aed42d91fdc04e238f826c0ac7fee4ab.12', // Sanssouci Park
-        '1f35e5cb0eef462ba49be07eaff2f027.12', // Viktoria im Park
-        '9f68979a62984a2284188ac4e50b6799.12', // Park Sanssouci - Neues Palais
-        '2c26250db6bf4438a1949696cd464ba9.11', // Freundschaftstempel im Park Sa
-        '04e4a834268d46b293406d94fa98b2f9.12', // Universität Potsdam am Schloss
-        '4cc4e24bd42348b8b95656b390654aff.12', // Neues Palais, Potsdam-Sanssouc
-        '22ce8b467196446f889104ccba27d12c.12', // Neues Palais im Park Sanssouci
-        'b22519f2a0ee4fef8d62cb7e98bc8e15.12', // Potsdam - Neues Palais
-        'ef96b28d877e49af9952a84b056f9a31.12', // Neues Palais im Park Sanssouci
-        '3f16528ed033461b89aaada66bd2833c.12', // Neues Palais, Potsdam-Sanssouc
-        '14166a9669314e56b7754500f13a5918.12', // Symbiose
-        'a2ffe85be95b460e8631308b9486f56b.12', // das Neue Palais am Morgen
-        'dfe9ac39f92f418cbb2de7ec54b94d76.12', // Blick durch die Kastanien
-        '283dbfcbe7074bd292d670ea0a6eb59f.12', // Neue Palais - Potsdam - Kandel
       ]
     },
     'GB': {
@@ -106,42 +125,23 @@ window.plugin.wetterberichtportals.city.potsdam = function() {
         '53706d6336e14a6cb0e9f79c510a978c.12', // Sphinx etwas bitter
       ]
     },
-    'CY': {
+    'NP': {
       'portals': [
-        '9deac577e9614dd7a1b70ff49eed1773.12', // Allemagne - Potsdam Film Museu
-        '5b9028927b084961a21fba47938667c7.11', // jahrhundertschritt von Wolfgan
-        '1a60c3a104824a6d96138e8af47a4d8e.12', // Potsdam-01  (ha_rk@gmx.net)
-        '46ce5bd63e784e7fad5514d6bc2c3a8f.11', // Bewegungsbild
-        '8e92ba87560a4ecc916cbb67ee5aa8c7.12', // Am alten Markt
-        'b453a47575a74755b7d5f40702789757.12', // Störende Plastik I (nicht mehr
-        '1f1b789e95cf42e5a960f70ad0d0042d.12', // Lustgarten - Potsdam
-        'a2b0b35a57bf4924927c72e793d63cfe.12', // Paar II
-        '16cafacece364ce69b8a8f7d930ac08b.12', // Störende Plastik III (nicht me
-        '29d2f70a0f8b4ab48b273a35398c88ab.12', // Potsdam-04   (ha_rk@gmx.net)
-        'a39931f8e8674e778068f0e35c11097d.12', // Berlin
-        'fd2c4813fc894fdd8981477108ca466c.12', // Heavenly music
-        'cafe041d481e468d95270abb5a149876.12', // Rathaus (alter Markt)
-        'cc477a9a07554ef1b763639c634d5ad8.12', // Regen
-        'e1b9b1fee337411e8137bcb29ac876b1.12', // Potsdam-05   (ha_rk@gmx.net)
-        '835a07a3c5124cda92e4352a22e7a0db.12', // Am neuen Markt
-        '32b758be05e2442bace8ad029875bd28.12', // Potsdam, Alter Markt
-        '2d7eb8327a7f4c3eaec2bfee1d7ee23e.12', // Pause
-        'd69f1aaab5b041eb87d2c560dbf0e4ae.12', // Brunnen - Freundschaftsinsel
-        '21b1d7a0f7554ca28f950c13a6aac40c.12', // aufstrebend I
-        '4d6f5ddf9cda42c5b0e0b78475eb7a9e.12', // aufstrebend II
-        '9335ac1869a64eeba02d35c3a0402e70.11', // Bürgerhaus am Eck
-        'bca1c5dadee949eeb636cd73c962a511.11', // Basilika im Nebel
-        'a463d9dfd1ff4a7a8b7cc7b99badd543.11', // Kämpferruhe
-        'c2398cf6c094454ead3f193733278be1.12', // Potsdam - Holländisches Vierte
-        '7ab8260a584a4ab98a1566ae68af8d38.11', // Stahlflammen
-        'd2a68ff53ba54208a9a2eb56b8079545.11', // Standort erstörte Synagoge
-        '9ad5e683bfde41f59471db8c862b56e3.11', // WilhelmsGalle
-        '3be12aac4ea847029e342cae357c0a69.12', // Kunstgebilde
-        '096945b1495648f49982fff9f7aad408.11', // MarmorTeleport
-        '0997b6050bba47ae8ec3e3d6bdb009e7.12', // Mask
-        'd5fe07b5f5bf4ac485b53fb403237e27.12', // Nauener Tor 1972
-        'cff942509f494aa2a411ff98d2e80a6d.12', // Detail on Nauener Tor
-        'fccb8ce35c88456cbb166bc9c939484d.11', // Nauener Tor
+        'dbad657ebe354e1cb4cf710124022a13.12', // Neues Palais
+        'aed42d91fdc04e238f826c0ac7fee4ab.12', // Sanssouci Park
+        '1f35e5cb0eef462ba49be07eaff2f027.12', // Viktoria im Park
+        '9f68979a62984a2284188ac4e50b6799.12', // Park Sanssouci - Neues Palais
+        '2c26250db6bf4438a1949696cd464ba9.11', // Freundschaftstempel im Park Sa
+        '04e4a834268d46b293406d94fa98b2f9.12', // Universität Potsdam am Schloss
+        '4cc4e24bd42348b8b95656b390654aff.12', // Neues Palais, Potsdam-Sanssouc
+        '22ce8b467196446f889104ccba27d12c.12', // Neues Palais im Park Sanssouci
+        'b22519f2a0ee4fef8d62cb7e98bc8e15.12', // Potsdam - Neues Palais
+        'ef96b28d877e49af9952a84b056f9a31.12', // Neues Palais im Park Sanssouci
+        '3f16528ed033461b89aaada66bd2833c.12', // Neues Palais, Potsdam-Sanssouc
+        '14166a9669314e56b7754500f13a5918.12', // Symbiose
+        'a2ffe85be95b460e8631308b9486f56b.12', // das Neue Palais am Morgen
+        'dfe9ac39f92f418cbb2de7ec54b94d76.12', // Blick durch die Kastanien
+        '283dbfcbe7074bd292d670ea0a6eb59f.12', // Neue Palais - Potsdam - Kandel
       ]
     },
 
