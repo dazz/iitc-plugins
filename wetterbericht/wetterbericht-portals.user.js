@@ -400,6 +400,13 @@ window.plugin.wetterberichtportals.city.berlin = function() {
         '4225fd1b6751400f93be9d9565948d4a.11', // Ev. Kirche Alt-Pankow
         '8447621d7d7c4666b792b5230f6638c2.12', // Springbrunnen
         'f81d0e8ab468452f984e8ea5852df515.11', // Holzskulptur
+        'd8db5ff5b9e54374a532b066000b4a89.11', // Eingang Bleichröderpark
+        '9a0f82bf97c147418d5a387288032513.11', // Skulptur Bleichröderpark
+        '992c628018a24e4f81657cb91608ef4a.11', // Berlin Wall, Pankow
+        'e85a14a278d945e38606a55fece0a483.11', // Der Steinehändler
+        'c00d82d7cf864a6fab030a9c2425a3d4.11', // Mosaik Grunowstraße
+        '59727d5d0aec4b88ad625ccee1980935.11', // Pankow Facade
+        '2873af92411640cdb0beeee116d9ff7d.11', // S+U Bahnhof Pankow
        ]
      },
      'VFH': {
