@@ -11,12 +11,12 @@
 // ==/UserScript==
 
 function wrapper() {
-  // ensure plugin framework is there, even if iitc is not yet loaded
+// ensure plugin framework is there, even if iitc is not yet loaded
   if(typeof window.plugin !== 'function') window.plugin = function() {};
 
 
-  // PLUGIN START ////////////////////////////////////////////////////////
-  // use own namespace for plugin
+// PLUGIN START ////////////////////////////////////////////////////////
+// use own namespace for plugin
   window.plugin.wetterbericht = function() {};
 
   window.plugin.wetterbericht.setup = function() {
@@ -27,13 +27,13 @@ function wrapper() {
     addHook('portalDataLoaded', window.plugin.wetterbericht.portalDataLoaded);
   }
 
-
+  
   window.plugin.wetterbericht.result = {};
 
   window.plugin.wetterbericht.portalDataLoaded = function(data) {
-
+    
     var p = data.portals;
-
+    
     var citydata = window.plugin.wetterberichtportals.city['berlin']();
     var areas = citydata.areas;
     $.each(areas, function(ind, area) {
@@ -50,16 +50,16 @@ function wrapper() {
 
             if(typeof window.portals[pid] !== "undefined") {
               var params = {fillColor: 'white', fillOpacity: 10};
-              window.portals[pid].setStyle(params);
+              window.portals[pid].setStyle(params);  
             }
-
+            
             var faction = d[2].controllingTeam.team;
             if (typeof area_data[faction] === "undefined") { return false } // the faction is undefined
             if (typeof area_data[faction]['portals'][pid] === "undefined") {
               area_data[faction]['portals'][pid] = 1;
               area_data[faction]['sum']   += window.getPortalLevel(d[2]);
               area_data[faction]['maxAP'] += window.getAttackApGain(d[2]).totalAp;
-
+              
               //window.plugin.wetterbericht.export.add(d);  // [1] collect all portals in list to filter double entries
             }
           }
@@ -74,19 +74,19 @@ function wrapper() {
     //console.log(window.plugin.wetterbericht.result);
   }
 
-  window.plugin.wetterbericht.export = function() {};
-
+  window.plugin.wetterbericht.export = function() {}; 
+  
   window.plugin.wetterbericht.export.string = ''; // le string
-  window.plugin.wetterbericht.export.dump = {};   // collection of portals
-
+    window.plugin.wetterbericht.export.dump = {};   // collection of portals
+    
   window.plugin.wetterbericht.export.push = function(s) {
     window.plugin.wetterbericht.export.string += s;
   }
 
   window.plugin.wetterbericht.export.add = function(d) {
     if(typeof window.plugin.wetterbericht.export.dump[d[0]] === "undefined"){
-      window.plugin.wetterbericht.export.dump[d[0]] = 1;
-      window.plugin.wetterbericht.export.string += "'"+d[0]+"', // "+d[2].portalV2.descriptiveText.TITLE+"\n";
+        window.plugin.wetterbericht.export.dump[d[0]] = 1;
+        window.plugin.wetterbericht.export.string += "'"+d[0]+"', // "+d[2].portalV2.descriptiveText.TITLE+"\n";
     }
   }
   window.plugin.wetterbericht.export.log = function() {
@@ -96,7 +96,7 @@ function wrapper() {
     window.plugin.wetterbericht.export.string = '';
     window.plugin.wetterbericht.export.dump = {};
   }
-
+  
   // all this to show a date?
   window.plugin.wetterbericht.datetime = function() {
     var currentTime = new Date()
@@ -118,14 +118,14 @@ function wrapper() {
   };
 
   window.plugin.wetterbericht.show = function() {
-
+    
     var factions = {'RESISTANCE':'R','ALIENS':'E'};
-    var s = 'Der Wetterbericht für ' + window.plugin.wetterbericht.datetime() + '\n';
+    var s = 'der wetterbericht für ' + window.plugin.wetterbericht.datetime() + '\n';
     var forXml = 'id,portals,resist_portals,resist_level,resist_ap,entlight_portals,entlight_level,entlight_ap' + '\n'; // PDL,5,4,1.09,7k,0,0.00,0k
     $.each(window.plugin.wetterbericht.result, function(area, area_data) {
       var anzP = window.plugin.wetterberichtportals.city['potsdam']()[area].portals.length;
       s += '[' + area + '|' + anzP + ']:';
-      forXml += area + ','+anzP;
+      forXml += area + ','+anzP; 
       $.each(area_data, function(faction, value) {
         //console.log(value);
         var numP  = Object.keys(value.portals).length;
@@ -137,7 +137,7 @@ function wrapper() {
       s += '\n';
       forXml += '\n';
     });
-    s += '\nLink zur Erklärung: https://github.com/dazz/iitc-plugins/blob/master/wetterbericht';
+    s += '\nlink zur erklärung: https://github.com/dazz/iitc-plugins/blob/master/wetterbericht';
     console.log(s);
     // console.log(forXml);
     alert(s);
@@ -145,7 +145,7 @@ function wrapper() {
 
   var setup = window.plugin.wetterbericht.setup;
 
-  // PLUGIN END //////////////////////////////////////////////////////////
+// PLUGIN END //////////////////////////////////////////////////////////
 
   if(window.iitcLoaded && typeof setup === 'function') {
     setup();
