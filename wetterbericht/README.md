@@ -52,21 +52,24 @@ Die Erleuchteten besetzen 31 Portale und haben diese durchschnittlich auf Level 
 
 ## Areas
 
-* PDL - Platz der Luftbrücke
-* GM  - Gendarmenmarkt
-* ESG - East Side Gallery
-* GS  - Großer Stern
-* TP  - Treptower Park
-* PDP - Potsdamer Platz
-* SC  - Schloss Charlottenburg
-* LG  - Lustgarten
-* GK  - Gedächtniskirche
-* THF - Tempelhof
-* NK  - Neukölln
-* KOE - Köpenick
-* PKW - Pankow
-* VFH - Volkspark Friedrichshain
+* ANH - Anhalter Bahnhof/Tempodrom
 * CC  - Checkpoint Charlie
+* ESG - East Side Gallery
+* GK  - Gedächtniskirche
+* GM  - Gendarmenmarkt
+* GRP - Gropiusbau/Topographie des Terrors
+* GS  - Großer Stern
+* KOE - Köpenick
+* LG  - Lustgarten
+* NK  - Neukölln
+* PDL - Platz der Luftbrücke
+* PDP - Potsdamer Platz
+* PKW - Pankow
+* SC  - Schloss Charlottenburg
+* THF - Tempelhof
+* TP  - Treptower Park
+* VFH - Volkspark Friedrichshain
+
 
 ## Faction
 
