@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             iitc-plugin-wetterbericht@dazz
 // @name           iitc: wetterbericht
-// @version        0.1.3
+// @version        0.1.4
 // @namespace      https://github.com/breunigs/ingress-intel-total-conversion
 // @updateURL      https://github.com/thiasb/iitc-plugins/raw/Potsdam/wetterbericht/wetterbericht.user.js
 // @downloadURL    https://github.com/thiasb/iitc-plugins/raw/Potsdam/wetterbericht/wetterbericht.user.js
@@ -34,7 +34,7 @@ function wrapper() {
 
     var p = data.portals;
 
-    var citydata = window.plugin.wetterberichtportals.city['berlin']();
+    var citydata = window.plugin.wetterberichtportals.city['potsdam']();
     var areas = citydata.areas;
     $.each(areas, function(ind, area) {
       var area_data;

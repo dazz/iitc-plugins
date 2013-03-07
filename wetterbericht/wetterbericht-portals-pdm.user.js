@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             iitc-plugin-wetterbericht-portals@dazz
 // @name           iitc: wetterbericht-portals-pdm
-// @version        0.1.3
+// @version        0.1.4
 // @namespace      https://github.com/breunigs/ingress-intel-total-conversion
 // @updateURL      https://github.com/thiasb/iitc-plugins/raw/Potsdam/wetterbericht/wetterbericht-portals-pdm.user.js
 // @downloadURL    https://github.com/thiasb/iitc-plugins/raw/Potsdam/wetterbericht/wetterbericht-portals-pdm.user.js
@@ -17,9 +17,13 @@ function wrapper() {
 
   // PLUGIN START ////////////////////////////////////////////////////////
   // use own namespace for plugin
-  window.plugin.wetterberichtportals = function() {};
+  // wetterberichtportals can be multiple city files so let's prepare
+  if(typeof window.plugin.wetterberichtportals !== 'function') {
+    window.plugin.wetterberichtportals = function() {};
+    window.plugin.wetterberichtportals.city = function() {};
+  }
 
-  window.plugin.wetterberichtportals.city = function() {};
+  // city start: Potsdam
   window.plugin.wetterberichtportals.city.potsdam = function() {
     return {
       'areas': [ // select area(s) you want to see
