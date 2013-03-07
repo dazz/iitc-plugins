@@ -121,7 +121,7 @@ function wrapper() {
     
     var factions = {'RESISTANCE':'R','ALIENS':'E'};
     var s = 'der wetterbericht für ' + window.plugin.wetterbericht.datetime() + '\n';
-    var forXml = ''; // PDL,5,4,1.09,7k,0,0.00,0k
+    var forXml = 'id,portals,resist_portals,resist_level,resist_ap,entlight_portals,entlight_level,entlight_ap' + '\n'; // PDL,5,4,1.09,7k,0,0.00,0k
     $.each(window.plugin.wetterbericht.result, function(area, area_data) {
       var anzP = window.plugin.wetterberichtportals.city['berlin']()[area].portals.length;
       s += '[' + area + '|' + anzP + ']:';
