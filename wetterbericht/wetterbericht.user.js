@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             iitc-plugin-wetterbericht@dazz
 // @name           iitc: wetterbericht
-// @version        0.1.0
+// @version        0.1.1
 // @namespace      https://github.com/breunigs/ingress-intel-total-conversion
 // @updateURL      https://github.com/dazz/iitc-plugins/raw/master/wetterbericht/wetterbericht.user.js
 // @downloadURL    https://github.com/dazz/iitc-plugins/raw/master/wetterbericht/wetterbericht.user.js
@@ -132,12 +132,12 @@ function wrapper() {
         var level = (numP>0) ? (value.sum/numP).toFixed(2) : '0.00';
         var maxAP = (value.maxAP/1000).toFixed(0);
         s += '\t' + factions[faction] + '('+numP+'): ' + level + 'L|'+ maxAP + 'kAP';
-        forXml += + ',' + numP + ',' + level + ',' + maxAP + 'k'
+        forXml += ',' + numP + ',' + level + ',' + maxAP + 'k'
       });
       s += '\n';
       forXml += '\n';
     });
-    s += '\nlink zur erklärung: http://tinyurl.com/iwb-legende';
+    s += '\nlink zur erklärung: https://github.com/dazz/iitc-plugins/blob/master/wetterbericht';
     console.log(s);
     // console.log(forXml);
     alert(s);
