@@ -17,9 +17,13 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 
 // PLUGIN START ////////////////////////////////////////////////////////
 // use own namespace for plugin
-window.plugin.wetterberichtportals = function() {};
-  
-window.plugin.wetterberichtportals.city = function() {};
+// wetterberichtportals can be multiple city files so let's prepare
+if(typeof window.plugin.wetterberichtportals !== 'function') { 
+  window.plugin.wetterberichtportals = function() {};
+  window.plugin.wetterberichtportals.city = function() {};
+}
+
+// city start: BERLIN
 window.plugin.wetterberichtportals.city.berlin = function() {
   return {
     'areas': [ // select area(s) you want to see
