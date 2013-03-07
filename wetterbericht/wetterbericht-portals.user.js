@@ -27,9 +27,22 @@ if(typeof window.plugin.wetterberichtportals !== 'function') {
 window.plugin.wetterberichtportals.city.berlin = function() {
   return {
     'areas': [ // select area(s) you want to see
-      'CC', 'ESG', 'GK', 'GM', 'GS', 'KOE', 'LG', 'NK', 
+      'ANH', 'CC', 'ESG', 'GK', 'GM', 'GRP', 'GS', 'KOE', 'LG', 'NK', 
       'PDL', 'PKW', 'PP', 'THF', 'TP', 'SC', 'VFH',
     ],
+    'ANH': {
+      'portals': [
+        '3c70c9111d0b4eb4806d57397271ce86.12', // Berlin- Anhalter Bahnhof im Sc
+        '1c5f0221a76745eb9d9b7727047e4a7f.12', // Berlin - Anhalter Bahnhof Port
+        'b33b0ddf9fc94e89a0993911a7cbac6d.12', // Berlin - Anhalter Bahnhof Port
+        'aa2deb7b1fc249e1ab29e3dc845b8419.12', // Day and Night by Ludwig Brunow
+        'cfd39fc3b71d41d782880e266c42f3f7.12', // Tempodrom by TF
+        '5cd0e232476f4b45a69896c07d981169.12', // Berlin - Tempodrom
+        '21aef2b4e5c640d78c8177b69ec62308.12', // Berlin
+        'f0b3cb91460d4b96b01fca11ca17b3ce.12', // Berlin - Dachkonstruktion des 
+        'e026dcac4d7240aa8db2cf43f58cb9b1.12', // Berlin - Postgebäude
+      ]
+    },
     'CC': {
       'portals': [
         '8fbe5b0690ec41008a6ce9fd4ef384c0.12', // Checkpoint Charlie Site
@@ -89,6 +102,18 @@ window.plugin.wetterberichtportals.city.berlin = function() {
         'f507ed3b0ebf41409d08998741849e1c.12', // Standbilder
         '0a9debf4c05e4b14b67cf92bf54e8287.12', // Dicker weißer Brocken
         '2e54af0f07aa4db49bdcd5a687fb9a33.12', // He and She lie in Berlin
+      ]
+    },
+    'GRP': {
+      'portals': [
+        '1f4831bc995545348fede1c2f8d07ed2.12', // Topografía del Terror
+        '8fade11e6d6249c0a7cb3271590c9371.12', // Muro de Berlin
+        '9654344bcb054637b4e4899b03ea2c3e.12', // Die Welt Baloon by night
+        'e722958e2c514d38a46a0c27ce7624ba.12', // Topographie des Terrors
+        'c52ac80faaba46cb9620a84b1fd9f817.12', // Berliner Mauer
+        '8a75adb11d9c4138958a5eb289a44060.12', // Baudenkmal Berliner Mauer
+        'ecb6cb822f07466c80518fc2da01f488.12', // Mur de Berlin, Berlin, Allemag
+        '21aef2b4e5c640d78c8177b69ec62308.12', // Berlin
       ]
     },
     'GS': {
