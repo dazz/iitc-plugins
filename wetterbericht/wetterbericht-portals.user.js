@@ -27,8 +27,8 @@ if(typeof window.plugin.wetterberichtportals !== 'function') {
 window.plugin.wetterberichtportals.city.berlin = function() {
   return {
     'areas': [ // select area(s) you want to see
-      'PDL', 'GM', 'ESG', 'GS', 'TP', 'PDP', 'SC', 'LG', 'GK', 
-      'THF', 'NK', 'KOE', 'PKW', 'VFH', 'CC'
+      'CC', 'ESG', 'GK', 'GM', 'GS', 'KOE', 'LG', 'NK', 
+      'PDL', 'PKW', 'PP', 'THF', 'TP', 'SC', 'VFH',
     ],
     'CC': {
       'portals': [
@@ -147,7 +147,7 @@ window.plugin.wetterberichtportals.city.berlin = function() {
         '3b8c79dc8a084f41a8f27e5c5c451db7.12', // Soviet War Memorial, Treptower
       ]
     },
-    'PDP': {
+    'PP': {
       'portals': [
         'fb485d2af0b54d6db636b0d30718a058.12', // Pferdekopf (Horsehead) by Hans
         '8c3d0917e2e34ee98660e4b37fb97ac4.12', // De San Martin
