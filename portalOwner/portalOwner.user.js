@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             portalOwner@smilodazsprod
 // @name           iitc: portalOwner
-// @version        0.1
+// @version        0.1.1
 // @updateURL      https://raw.github.com/dazz/iitc-plugins/gh-pages/plugins/portalOwner.user.js
 // @downloadURL    https://raw.github.com/dazz/iitc-plugins/gh-pages/plugins/portalOwner.user.js
 // @description    Shows red marker where player is owner of a portal and a yellow marker if player has resos in a portal
@@ -23,8 +23,6 @@ function wrapper() {
   // const values
   window.plugin.portalOwner.OWNER_COLOR = "red";
   window.plugin.portalOwner.RESO_COLOR = "yellow";
-
-  window.plugin.portalOwner._delaunayScriptLocation = 'https://raw.github.com/breunigs/ingress-intel-total-conversion/gh-pages/dist/delaunay.js';
 
   window.plugin.portalOwner.layer = null;
 
@@ -83,29 +81,26 @@ function wrapper() {
   };
 
   window.plugin.portalOwner.setup = function() {
-    load(window.plugin.portalOwner._delaunayScriptLocation).thenRun(function() {
+    window.plugin.portalOwner.layer = L.layerGroup([]);
 
-      window.plugin.portalOwner.layer = L.layerGroup([]);
-
-      window.addHook('checkRenderLimit', function(e) {
-        if (window.map.hasLayer(window.plugin.portalOwner.layer) &&
-            window.plugin.portalOwner._renderLimitReached)
-          e.reached = true;
-      });
-
-      window.addHook('portalDataLoaded', function(e) {
-        if (window.map.hasLayer(window.plugin.portalOwner.layer))
-          window.plugin.portalOwner.updateLayer();
-      });
-
-      window.map.on('layeradd', function(e) {
-        if (e.layer === window.plugin.portalOwner.layer)
-          window.plugin.portalOwner.updateLayer();
-      });
-      window.map.on('zoomend moveend', window.plugin.portalOwner.updateLayer);
-      window.layerChooser.addOverlay(window.plugin.portalOwner.layer, 'My Portals');
-      map.addLayer(window.plugin.portalOwner.layer);
+    window.addHook('checkRenderLimit', function(e) {
+      if (window.map.hasLayer(window.plugin.portalOwner.layer) &&
+          window.plugin.portalOwner._renderLimitReached)
+        e.reached = true;
     });
+
+    window.addHook('portalDataLoaded', function(e) {
+      if (window.map.hasLayer(window.plugin.portalOwner.layer))
+        window.plugin.portalOwner.updateLayer();
+    });
+
+    window.map.on('layeradd', function(e) {
+      if (e.layer === window.plugin.portalOwner.layer)
+        window.plugin.portalOwner.updateLayer();
+    });
+    window.map.on('zoomend moveend', window.plugin.portalOwner.updateLayer);
+    window.layerChooser.addOverlay(window.plugin.portalOwner.layer, 'My Portals');
+    map.addLayer(window.plugin.portalOwner.layer);
   };
   var setup = window.plugin.portalOwner.setup;
 
