@@ -14,21 +14,24 @@
 
 ## So sieht's aus
 
-    der wetterbericht für 05.03.2013 9:28
-    [PDL|5]:    R(5):  4.42L|12kAP	E(0):  0.00L|0kAP
-    [GM|10]:	R(2):  3.56L|5kAP	E(8):  1.81L|21kAP
-    [ESG|23]:	R(22): 4.43L|79kAP	E(1):  3.63L|2kAP
-    [GS|38]:	R(20): 2.17L|46kAP	E(17): 1.22L|34kAP
-    [TP|10]:	R(0):  0.00L|0kAP	E(10): 4.35L|25kAP
-    [PDP|42]:	R(31): 4.04L|80kAP	E(11): 4.76L|34kAP
-    [SC|28]:	R(19): 3.74L|49kAP	E(9):  3.94L|20kAP
-    [LG|44]:	R(28): 2.36L|60kAP	E(16): 1.06L|31kAP
-    [GK|53]:	R(22): 4.32L|75kAP	E(22): 4.19L|58kAP
-    [THF|17]:	R(4):  3.19L|9kAP	E(13): 6.34L|31kAP
-    [NK|23]:	R(7):  4.64L|18kAP	E(16): 5.79L|65kAP
-    [KOE|11]:	R(10): 5.58L|42kAP	E(1):  2.25L|2kAP
-    [PKW|9]:	R(0):  0.00L|0kAP	E(9):  2.72L|21kAP
-    [VFH|14]:	R(11): 6.14L|37kAP	E(3):  2.75L|6kAP
+    Der Wetterbericht für 08.03.2013 11:38
+    [ANH|9]:    R(4):  3.84L|9kAP	E(5):  3.02L|18kAP
+    [CC|7]:     R(2):  3.25L|5kAP	E(5):  2.60L|21kAP
+    [ESG|23]:	R(19): 4.87L|45kAP	E(4):  3.75L|9kAP
+    [GK|53]:	R(28): 3.34L|93kAP	E(15): 4.04L|36kAP
+    [GM|10]:	R(10): 4.80L|47kAP	E(0):  0.00L|0kAP
+    [GRP|8]:	R(2):  1.00L|4kAP	E(6):  4.54L|20kAP
+    [GS|38]:	R(37): 3.29L|91kAP	E(1):  3.63L|3kAP
+    [KOE|11]:	R(5):  3.88L|13kAP	E(6):  2.33L|26kAP
+    [LG|44]:	R(37): 2.49L|83kAP	E(7):  2.89L|15kAP
+    [NK|23]:	R(5):  4.10L|11kAP	E(18): 5.54L|71kAP
+    [PDL|5]:	R(0):  0.00L|0kAP	E(5):  5.63L|25kAP
+    [PKW|16]:	R(5):  4.55L|11kAP	E(11): 4.61L|29kAP
+    [PP|42]:	R(31): 4.27L|109kAP	E(11): 3.26L|40kAP
+    [THF|17]:	R(10): 4.17L|32kAP	E(7):  6.54L|17kAP
+    [TP|10]:	R(10): 5.75L|30kAP	E(0):  0.00L|0kAP
+    [SC|28]:	R(17): 4.96L|67kAP	E(11): 4.44L|32kAP
+    [VFH|14]:	R(13): 4.48L|32kAP	E(1):  5.13L|2kAP
 
 
 ## Wie ist der wetterbericht zu lesen:
