@@ -456,6 +456,16 @@ function wrapper() {
           '26e0183afd43401ba0a157b92b582e14.11', // SEZ Berlin
         ]
       },
+      'RRD': {
+        'portals': [
+          '77674fccee924d0d94dd2a230a29a342.11', // Fischbrunnen
+          '2041a1a836734aa583397deb92dde04f.11', // Rathaus bei Nacht
+          '63e3e886f2754aae96d84e86723962be.11', // Alter Feuermelder
+          '7e6b27805c9c4809bab1772a455a8d59.11', // Mahnmal Gegen Gewalt
+          '73036fbecd0d4ff290eb54ba2413e82c.11', // Rathaus Reinickendorf
+          'a7a44d7fbcb4461da7c807aa88153225.11' // Dorfkirche Alt-Wittenau
+        ]
+      }
 //      '': {
 //        'portals': [
 //
