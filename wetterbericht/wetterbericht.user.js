@@ -147,7 +147,7 @@ function wrapper() {
   };
 
   window.plugin.wetterbericht.inschick = function() {
-    var leString = 'http://thias.github.com/iitc-plugins/wetterbericht.html?';
+    var leString = 'http://thiasb.github.com/iitc-plugins/wetterbericht.html?';
     var areas = 'areas=';
     var areaValues = '';
     var areaAnzP = '&anzP=';
