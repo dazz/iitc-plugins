@@ -152,7 +152,7 @@ function wrapper() {
     var areaValues = '';
     var areaAnzP = '&anzP=';
     $.each(window.plugin.wetterbericht.result, function(area, area_data) {
-      var anzP = window.plugin.wetterberichtportals.city['berlin']()[area].portals.length;
+      var anzP = window.plugin.wetterberichtportals.city['potsdam']()[area].portals.length;
       areaAnzP += anzP + ',';
       areas += area + ',';// + anzP + ',';
       areaValues += '&' + area + '=';
