@@ -139,7 +139,7 @@ function wrapper() {
       s += '\n';
       forXml += '\n';
     });
-    s += '\nLink zur Erklärung: https://github.com/thiasb/iitc-plugins/blob/master/wetterbericht';
+    s += '\nLink zur Erklärung: https://github.com/dazz/iitc-plugins/blob/master/wetterbericht';
     console.log(s);
     // console.log(forXml);
     alert(s);
@@ -147,7 +147,7 @@ function wrapper() {
   };
 
   window.plugin.wetterbericht.inschick = function() {
-    var leString = 'http://thiasb.github.com/iitc-plugins/wetterbericht.html?';
+    var leString = 'http://dazz.github.com/iitc-plugins/wetterbericht.html?';
     var areas = 'areas=';
     var areaValues = '';
     var areaAnzP = '&anzP=';
