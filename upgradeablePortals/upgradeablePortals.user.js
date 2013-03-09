@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             upgradeablePortals@smilodazsprod
 // @name           iitc: upgradeablePortals
-// @version        0.2
+// @version        0.2.1
 // @updateURL      https://github.com/dazz/iitc-plugins/raw/master/upgradeablePortals/upgradeablePortals.user.js
 // @downloadURL    https://github.com/dazz/iitc-plugins/raw/master/upgradeablePortals/upgradeablePortals.user.js
 // @description    Shows marker on portals that can be upgraded to at least player level - 1
@@ -21,8 +21,6 @@ function wrapper() {
   window.plugin.upgradeablePortals = function() {};
 
   // const values
-
-  window.plugin.upgradeablePortals._delaunayScriptLocation = 'https://raw.github.com/breunigs/ingress-intel-total-conversion/gh-pages/dist/delaunay.js';
 
   window.plugin.upgradeablePortals.layer = null;
 
@@ -159,30 +157,27 @@ function wrapper() {
 
 
   window.plugin.upgradeablePortals.setup = function() {
-    load(window.plugin.upgradeablePortals._delaunayScriptLocation).thenRun(function() {
+    window.plugin.upgradeablePortals.layer = L.layerGroup([]);
 
-      window.plugin.upgradeablePortals.layer = L.layerGroup([]);
-
-      window.addHook('checkRenderLimit', function(e) {
-        if (window.map.hasLayer(window.plugin.upgradeablePortals.layer) &&
-            window.plugin.upgradeablePortals._renderLimitReached)
-          e.reached = true;
-      });
-
-      window.addHook('portalDataLoaded', function(e) {
-        if (window.map.hasLayer(window.plugin.upgradeablePortals.layer))
-          window.plugin.upgradeablePortals.updateLayer();
-      });
-
-      window.map.on('layeradd', function(e) {
-        if (e.layer === window.plugin.upgradeablePortals.layer)
-          window.plugin.upgradeablePortals.updateLayer();
-      });
-      window.map.on('zoomend moveend', window.plugin.upgradeablePortals.updateLayer);
-      window.layerChooser.addOverlay(window.plugin.upgradeablePortals.layer, 'Upgradeable Portals');
-
-      //map.addLayer(window.plugin.upgradeablePortals.layer);
+    window.addHook('checkRenderLimit', function(e) {
+      if (window.map.hasLayer(window.plugin.upgradeablePortals.layer) &&
+          window.plugin.upgradeablePortals._renderLimitReached)
+        e.reached = true;
     });
+
+    window.addHook('portalDataLoaded', function(e) {
+      if (window.map.hasLayer(window.plugin.upgradeablePortals.layer))
+        window.plugin.upgradeablePortals.updateLayer();
+    });
+
+    window.map.on('layeradd', function(e) {
+      if (e.layer === window.plugin.upgradeablePortals.layer)
+        window.plugin.upgradeablePortals.updateLayer();
+    });
+    window.map.on('zoomend moveend', window.plugin.upgradeablePortals.updateLayer);
+    window.layerChooser.addOverlay(window.plugin.upgradeablePortals.layer, 'Upgradeable Portals');
+
+    //map.addLayer(window.plugin.upgradeablePortals.layer);
   };
   var setup = window.plugin.upgradeablePortals.setup;
 

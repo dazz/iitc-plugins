@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             iitc-plugin-wetterbericht-portals@dazz
 // @name           iitc: wetterbericht-portals
-// @version        0.1.2
+// @version        0.1.3
 // @namespace      https://github.com/breunigs/ingress-intel-total-conversion
 // @updateURL      https://github.com/dazz/iitc-plugins/raw/master/wetterbericht/wetterbericht-portals.user.js
 // @downloadURL    https://github.com/dazz/iitc-plugins/raw/master/wetterbericht/wetterbericht-portals.user.js
@@ -156,6 +156,8 @@ function wrapper() {
           '33e96ffff6464133907c22f7f8aa6480.12', // Berlin
           '704831cdfa8a4d83a76e1ef1db0243b0.12', // [Untitled]
           'cff7f47b1e2b4244b87928cb5a6e2cb6.12', // bismarck.BERLIN
+          'f3011055f6584f4b83059532704d8c63.12', // The Victory Column
+          'a58e75fab500440fb46b419fdbe545cd.12',  // Siegessäule
         ]
       },
       'TP': {
@@ -456,11 +458,21 @@ function wrapper() {
           '26e0183afd43401ba0a157b92b582e14.11', // SEZ Berlin
         ]
       },
-      //      '': {
-      //        'portals': [
-      //
-      //        ]
-      //      },
+      'RRD': {
+        'portals': [
+          '77674fccee924d0d94dd2a230a29a342.11', // Fischbrunnen
+          '2041a1a836734aa583397deb92dde04f.11', // Rathaus bei Nacht
+          '63e3e886f2754aae96d84e86723962be.11', // Alter Feuermelder
+          '7e6b27805c9c4809bab1772a455a8d59.11', // Mahnmal Gegen Gewalt
+          '73036fbecd0d4ff290eb54ba2413e82c.11', // Rathaus Reinickendorf
+          'a7a44d7fbcb4461da7c807aa88153225.11' // Dorfkirche Alt-Wittenau
+        ]
+      }
+//      '': {
+//        'portals': [
+//
+//        ]
+//      },
     };
   };
   var setup = function(){};
