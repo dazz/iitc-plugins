@@ -25,9 +25,9 @@ function wrapper() {
 
   window.plugin.wetterbericht.setupCallback = function() {
     $('#toolbox').append('<a onclick="window.plugin.wetterbericht.show()">wetterbericht</a> ');
+    $('#toolbox').append('<div id="iwb-schick"></div>');
     addHook('portalDataLoaded', window.plugin.wetterbericht.portalDataLoaded);
   };
-
 
   window.plugin.wetterbericht.result = {};
 
@@ -143,6 +143,30 @@ function wrapper() {
     console.log(s);
     // console.log(forXml);
     alert(s);
+    window.plugin.wetterbericht.inschick();
+  };
+
+  window.plugin.wetterbericht.inschick = function() {
+    var leString = 'http://dazz.github.com/iitc-plugins/wetterbericht.html?';
+    var areas = 'areas=';
+    var areaValues = '';
+    var areaAnzP = '&anzP=';
+    $.each(window.plugin.wetterbericht.result, function(area, area_data) {
+      var anzP = window.plugin.wetterberichtportals.city['berlin']()[area].portals.length;
+      areaAnzP += anzP + ',';
+      areas += area + ',';// + anzP + ',';
+      areaValues += '&' + area + '=';
+      $.each(area_data, function(faction, value) {
+        var numP  = Object.keys(value.portals).length;
+        var level = (numP>0) ? (value.sum/numP).toFixed(2) : '0.00';
+        var maxAP = (value.maxAP/1000).toFixed(0);
+        areaValues += numP + ',' + level + ',' + maxAP + ','
+      });
+    });
+    leString += areas + areaValues + areaAnzP;
+
+    $('#iwb-schick').detach();
+    $('#toolbox').append('<a id="iwb-schick" target="new" href="'+ leString +'">schick</a> ');
   };
 
   var setup = window.plugin.wetterbericht.setup;
