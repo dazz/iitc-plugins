@@ -82,6 +82,10 @@ Die Erleuchteten besetzen 31 Portale und haben diese durchschnittlich auf Level 
 
 ## Eigene Areas hinzufügen
 
+Flyingmana hat ein cooles UserScript geschrieben mit der man Portale einfach exportieren kann: [portalOrganizer](https://github.com/dazz/iitc-plugins/tree/master/wetterbericht/portalOrganizer)
+
+### Oder:
+
 Im Script [wetterbericht.user.js](https://github.com/dazz/iitc-plugins/blob/master/wetterbericht/wetterbericht.user.js) gibt es eine Export-Funktionalität.
 
     [63] //window.plugin.wetterbericht.export.add(d);  // [1] collect all portals in list to filter double entries
