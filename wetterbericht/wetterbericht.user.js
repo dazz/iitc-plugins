@@ -21,11 +21,12 @@ function wrapper() {
 
   window.plugin.wetterbericht.setup = function() {
     window.plugin.wetterbericht.setupCallback();
-  }
+  };
+
   window.plugin.wetterbericht.setupCallback = function() {
     $('#toolbox').append('<a onclick="window.plugin.wetterbericht.show()">wetterbericht</a> ');
     addHook('portalDataLoaded', window.plugin.wetterbericht.portalDataLoaded);
-  }
+  };
 
 
   window.plugin.wetterbericht.result = {};
@@ -72,7 +73,7 @@ function wrapper() {
 
     });
     //console.log(window.plugin.wetterbericht.result);
-  }
+  };
 
   window.plugin.wetterbericht.export = function() {};
 
@@ -81,21 +82,22 @@ function wrapper() {
 
   window.plugin.wetterbericht.export.push = function(s) {
     window.plugin.wetterbericht.export.string += s;
-  }
+  };
 
   window.plugin.wetterbericht.export.add = function(d) {
     if(typeof window.plugin.wetterbericht.export.dump[d[0]] === "undefined"){
       window.plugin.wetterbericht.export.dump[d[0]] = 1;
       window.plugin.wetterbericht.export.string += "'"+d[0]+"', // "+d[2].portalV2.descriptiveText.TITLE+"\n";
     }
-  }
+  };
+
   window.plugin.wetterbericht.export.log = function() {
     console.log(window.plugin.wetterbericht.export.string);
     console.log('-----------------------------\n');
     // clearing data
     window.plugin.wetterbericht.export.string = '';
     window.plugin.wetterbericht.export.dump = {};
-  }
+  };
 
   // all this to show a date?
   window.plugin.wetterbericht.datetime = function() {

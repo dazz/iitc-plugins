@@ -1,10 +1,10 @@
 // ==UserScript==
 // @id             iitc-plugin-portal-organizer@flyingmana
 // @name           iitc: portal-organizer
-// @version        0.0.1
+// @version        0.1.0
 // @namespace      https://github.com/breunigs/ingress-intel-total-conversion
-// @updateURL      https://github.com/dazz/iitc-plugins/raw/master/portalOrganizer/portal-organizer.user.js
-// @downloadURL    https://github.com/dazz/iitc-plugins/raw/master/portalOrganizer/portal-organizer.user.js
+// @updateURL      https://github.com/dazz/iitc-plugins/raw/master/wetterbericht/portalOrganizer/portal-organizer.user.js
+// @downloadURL    https://github.com/dazz/iitc-plugins/raw/master/wetterbericht/portalOrganizer/portal-organizer.user.js
 // @description    portal-organizer
 // @include        *://www.ingress.com/intel*
 // @match          *://www.ingress.com/intel*
@@ -17,61 +17,57 @@ function wrapper() {
 
 
   // PLUGIN START ////////////////////////////////////////////////////////
-  // use own namespace for plugin
-  // wetterberichtportals can be multiple city files so let's prepare
-  if(typeof window.plugin.wetterberichtportals !== 'function') {
-    window.plugin.wetterberichtportals = function() {};
-    window.plugin.wetterberichtportals.city = function() {};
-  }
+  // use own namespace for plugin 
+  window.plugin.portalorganizer = function() {
 
-  window.plugin.portalorganizer = function(){
-
-    self = this
+    self = this;
     this.currentSet = [];
 
-    this.init = function(){
-
-      $('#toolbox').append('<a onclick="window.plugin.portalorganizer.addToSet()">Add To Set</a> ');
-    };
-
-    this.addToSet = function(){
-      if( selectedPortal )
+    this.addToSet = function() {
+      if (selectedPortal) {
         this.currentSet.push(selectedPortal);
+      }
     };
 
-    this.printCurrentSet = function(){
-      var resultSet = []
-      var result
+    this.printCurrentSet = function() {
+      var resultSet = [];
+      var result;
 
-      $.each( this.currentSet, function( index, element){
-        //console.log(element, portals[element])
-        var temp = ""
-        temp = temp + "'" + element + "'"
-        if( self.currentSet[index+1] ){
-          temp = temp + ","
-        }else{
-          temp = temp + " "
+      $.each(this.currentSet, function(index, guid) {
+        //console.log(guid, portals[guid]);
+        var outputSting = "";
+        outputSting = outputSting + "'" + guid + "'";
+        if (self.currentSet[index+1] ) {
+          outputSting = outputSting + ","
+        } else {
+          outputSting = outputSting + " "
         }
-        temp = temp + " // " + portals[element].options.details.portalV2.descriptiveText.TITLE
-        resultSet.push( temp )
-      } )
+        outputSting = outputSting + " // " + portals[guid].options.details.portalV2.descriptiveText.TITLE;
+        resultSet.push( outputSting )
+      });
 
-      result = "'portals': [\n"
-      result = result + "" + resultSet.join("\n") + ""
-      result = result + "\n]"
-      console.log(result)
-    }
+      result = "'portals': [\n";
+      result = result + "" + resultSet.join("\n") + "";
+      result = result + "\n]";
+      console.log(result);
+    };
 
-    this.clearCurrentSet = function(){
+    this.clearCurrentSet = function() {
       this.currentSet = [];
-    }
+    };
+
+    this.setup = function() {
+      $('#toolbox').append('<a onclick="window.plugin.portalorganizer.addToSet()">Add</a> ');
+      $('#toolbox').append('<a onclick="window.plugin.portalorganizer.printCurrentSet()">Print</a> ');
+      $('#toolbox').append('<a onclick="window.plugin.portalorganizer.clearCurrentSet()">Clear</a> ');
+    };
 
     return this;
   }();
 
+  var setup = window.plugin.portalorganizer.setup;
 
-
-  var setup = function(){};
+  //var setup = window.plugin.portalorganizer.setup();
   // PLUGIN END //////////////////////////////////////////////////////////
 
   if(window.iitcLoaded && typeof setup === 'function') {
@@ -87,4 +83,3 @@ function wrapper() {
 var script = document.createElement('script');
 script.appendChild(document.createTextNode('('+ wrapper +')();'));
 (document.body || document.head || document.documentElement).appendChild(script);
-
