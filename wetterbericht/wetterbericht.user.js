@@ -24,7 +24,7 @@ function wrapper() {
   };
 
   window.plugin.wetterbericht.setupCallback = function() {
-    $('#toolbox').append('<a onclick="window.plugin.wetterbericht.show()">wetterbericht</a> ');
+    $('#toolbox').append('<a onclick="window.plugin.wetterbericht.show()">Wetterbericht</a> ');
     $('#toolbox').append('<div id="iwb-schick"></div>');
     addHook('portalDataLoaded', window.plugin.wetterbericht.portalDataLoaded);
   };
@@ -166,7 +166,7 @@ function wrapper() {
     leString += areas + areaValues + areaAnzP;
 
     $('#iwb-schick').detach();
-    $('#toolbox').append('<a id="iwb-schick" target="new" href="'+ leString +'">schick</a> ');
+    $('#toolbox').append('<a id="iwb-schick" target="new" href="'+ leString +'">WB schick</a> ');
   };
 
   var setup = window.plugin.wetterbericht.setup;
