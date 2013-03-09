@@ -156,6 +156,8 @@ function wrapper() {
           '33e96ffff6464133907c22f7f8aa6480.12', // Berlin
           '704831cdfa8a4d83a76e1ef1db0243b0.12', // [Untitled]
           'cff7f47b1e2b4244b87928cb5a6e2cb6.12', // bismarck.BERLIN
+          'f3011055f6584f4b83059532704d8c63.12', // The Victory Column
+          'a58e75fab500440fb46b419fdbe545cd.12',  // Siegessäule
         ]
       },
       'TP': {
