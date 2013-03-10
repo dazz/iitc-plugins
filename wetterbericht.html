@@ -65,6 +65,9 @@
             replace_this = replace_this.replace('_EP', areaData[3]);
             replace_this = replace_this.replace('_EL', areaData[4]);
             replace_this = replace_this.replace('_EAP', areaData[5]);
+
+            replace_this = replace_this.replace('_PR', (areaData[0]/anzP[i])*100);
+            replace_this = replace_this.replace('_PE', (areaData[3]/anzP[i])*100);
           }
 
           newHTML += replace_this;
@@ -110,13 +113,17 @@
     <div class="portal clearfix">
       <h4>_AREA <span>(_ANZ) <small> _DATE</small></span></h4>
       <ul class="stat clearfix">
-        <li><span class="label">Portale</span><span class="badge badge-info">_RP</span></li>
-        <li><span class="label">Level</span><span class="badge badge-info">_RL</span></li>
-        <li><span class="label">AP</span><span class="badge badge-info">_RAPk</span></li>
-        <li><span class="label">Portale</span><span class="badge badge-success">_EP</span></li>
-        <li><span class="label">Level</span><span class="badge badge-success">_EL</span></li>
-        <li><span class="label">AP</span><span class="badge badge-success">_EAPk</span></li>
+        <li><span class="label">Portale</span><span class="label label-info">_RP</span></li>
+        <li><span class="label">Level</span><span class="label label-info">_RL</span></li>
+        <li><span class="label">AP</span><span class="label label-info">_RAPk</span></li>
+        <li><span class="label">Portale</span><span class="label label-success">_EP</span></li>
+        <li><span class="label">Level</span><span class="label label-success">_EL</span></li>
+        <li><span class="label">AP</span><span class="label label-success">_EAPk</span></li>
       </ul>
+      <div class="progress">
+        <div class="bar bar-info" style="width: _PR%;"></div>
+        <div class="bar bar-success" style="width: _PE%;"></div>
+      </div>
     </div>
   </div>
 
