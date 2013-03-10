@@ -2,13 +2,35 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>Ingress Wetterbericht</title>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://github.com/allmarkedup/jQuery-URL-Parser/raw/master/purl.js"></script>
   <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet" />
+  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet" />
   <style>
     body {
       padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    }
+    .xml {
+      display: block;
+      background: #EEE;
+      margin-bottom: 25px;
+    }
+    .xml li {
+      display: block;
+      margin: 5px 10px 0 0;
+      float: left;
+      padding: 0 15px 0 10px;
+    }
+    li {
+      line-height: 20px;
+    }
+    .xml h4 {
+      padding: 0 15px 0 10px;
+      margin: 15px 5px 0 10px;
+    }
+    .xml li span.t {
+      margin-right: 5px;
     }
   </style>
   <script type="text/javascript">
@@ -29,8 +51,11 @@
 
         $.each(areas, function(i, area) {
           var replace_this = $('#iwb-template').html();
-          var anzPstring = (anzP && anzP !== '' && typeof anzP[i] !== undefined) ? ' (' + anzP[i] + ' Portale)' : '';
-          replace_this = replace_this.replace('_AREA', area + anzPstring);
+          if (anzP && anzP !== '' && typeof anzP[i] !== undefined) {
+            replace_this = replace_this.replace('_ANZ', anzP[i]);
+          }
+          replace_this = replace_this.replace('_DATE', '');
+          replace_this = replace_this.replace('_AREA', area);
           if (query[area] && query[area] !== '') {
             areaData = query[area].split(',');
             //console.log(areaData);
@@ -81,21 +106,35 @@
     </div>
   </div>
 
-  <div id="iwb-template" style="display: none">
+  <div id="iwb-template_old" style="display: none">
     <div class="row-fluid">
       <div class="span2">_AREA</div>
       <div class="span5">
-        <strong>Resistance:</strong>
+        <!--<strong>Resistance:</strong>-->
         Portale: <span class="badge badge-info">_RP</span>
         Level: <span class="badge badge-info">_RL</span>
         kAP: <span class="badge badge-info">_RAP</span>
       </div>
       <div class="span5">
-        <strong>Enlightened:</strong>
+        <!--<strong>Enlightened:</strong>-->
         Portale: <span class="badge badge-success">_EP</span>
         Level: <span class="badge badge-success">_EL</span>
         kAP: <span class="badge badge-success">_EAP</span>
       </div>
+    </div>
+  </div>
+
+  <div id="iwb-template" style="display: none">
+    <div class="xml clearfix">
+      <h4>_AREA <span>(_ANZ) <small> _DATE</small></span></h4>
+      <ul class="stat clearfix">
+        <li><span class="t">Portale</span><span class="badge badge-info">_RP</span></li>
+        <li><span class="t">Level</span><span class="badge badge-info">_RL</span></li>
+        <li><span class="t">AP</span><span class="badge badge-info">_RAPk</span></li>
+        <li><span class="t">Portale</span><span class="badge badge-success">_EP</span></li>
+        <li><span class="t">Level</span><span class="badge badge-success">_EL</span></li>
+        <li><span class="t">AP</span><span class="badge badge-success">_EAPk</span></li>
+      </ul>
     </div>
   </div>
 
