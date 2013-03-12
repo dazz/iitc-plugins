@@ -56,6 +56,7 @@ Die Erleuchteten besetzen 31 Portale und haben diese durchschnittlich auf Level 
 ## Areas
 
 * ANH - Anhalter Bahnhof/Tempodrom
+* AVK - Auguste-Viktoria-Klinikum
 * CC  - Checkpoint Charlie
 * ESG - East Side Gallery
 * GK  - Gedächtniskirche
