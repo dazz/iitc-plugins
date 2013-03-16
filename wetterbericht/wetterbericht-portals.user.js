@@ -28,7 +28,7 @@ function wrapper() {
     return {
       'areas': [ // select area(s) you want to see
         'ANH', 'CC', 'ESG', 'GK', 'GM', 'GRP', 'GS', 'KOE', 'LG', 'NK',
-        'PDL', 'PKW', 'PP', 'THF', 'TP', 'SC', 'VFH',
+        'PDL', 'PKW', 'PP', 'THF', 'TP', 'SC', 'VFH', 'AVK',
       ],
       'ANH': {
         'portals': [
@@ -466,6 +466,18 @@ function wrapper() {
           '7e6b27805c9c4809bab1772a455a8d59.11', // Mahnmal Gegen Gewalt
           '73036fbecd0d4ff290eb54ba2413e82c.11', // Rathaus Reinickendorf
           'a7a44d7fbcb4461da7c807aa88153225.11' // Dorfkirche Alt-Wittenau
+        ]
+      },
+      'AVK': {
+        'portals': [
+          'dd4689f6d9624055bce2f17d8c1483b4.11', // Vier Heilige Schwestern
+          '9993563ede9845168a82bf01a1df5718.11', // Menschen und Gepäck
+          '02be108a638c4fe0bc20d4192c938428.11', // Auguste Viktoria Klinik
+          '93257a77bfb142b4b81a296352b524d2.11', // Thüster Nautiliden
+          'acb70f415f2348b58b3484a85560dcdd.11', // Rotation Sculpture
+          'b4ac0a2e705e4a2c831a876ba16c33de.11', // Mädchen von Yukatan
+          '6fac895bd55e49cc948fef5351e7169d.11', // Taschenpyramide
+          'c86bd275e0fe4d2ba23b56baa53756d5.11', // Berlin Bear
         ]
       }
 //      '': {
