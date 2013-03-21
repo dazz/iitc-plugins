@@ -6,7 +6,9 @@
 // @downloadURL    https://raw.github.com/dazz/iitc-plugins/gh-pages/plugins/portalOwner.user.js
 // @description    Shows red marker where player is owner of a portal and a yellow marker if player has resos in a portal
 // @include        https://www.ingress.com/intel*
+// @include        http://www.ingress.com/intel*
 // @match          https://www.ingress.com/intel*
+// @match          http://www.ingress.com/intel*
 // ==/UserScript==
 
 function wrapper() {
