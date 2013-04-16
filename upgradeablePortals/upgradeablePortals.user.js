@@ -137,8 +137,9 @@ function wrapper() {
           } else if (possibleLevel >= 4) {
             currentIcon = iconL4;
           }
-          var m = L.marker([portal._latlng.lat, portal._latlng.lng], {title: portal.options.level+"->"+possibleLevel + ": " + resoString, clickable: false, icon: currentIcon});
+          var m = L.marker([portal._latlng.lat, portal._latlng.lng], {title: portal.options.level+"->"+possibleLevel + ": " + resoString, referenceToPortal: portal.options.guid, icon: currentIcon});
           m.on('mouseout', function() { $(this._icon).tooltip('close'); });
+          m.on('click', function(player) { window.renderPortalDetails(player.target.options.referenceToPortal); });
           m.addTo(window.plugin.upgradeablePortals.layer);
           window.setupTooltips($(m._icon));
         }
