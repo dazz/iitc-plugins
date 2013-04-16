@@ -65,12 +65,11 @@ function wrapper() {
     //  playerTeam = "RESISTANCE";
 
     $.each(window.portals, function(guid, portal) {
-      console.log(portal);
-      var resoDict = {'8': 1, '7': 1, '6': 2, '5': 2, '4': 4, '3':4, '2':4, '1':8};
+      var resoDict = {8: 1, 7: 1, 6: 2, 5: 2, 4: 4, 3:4, 2:4, 1:8};
       var portalResos = [0,0,0,0,0,0,0,0,0];
       var j = 8;
       while(j > playerLevel) {
-        resoDict[''+j--] = 0;
+        resoDict[j--] = 0;
       }
 
       var levelsum = 0;
@@ -83,7 +82,7 @@ function wrapper() {
         $.each(portal.options.details.resonatorArray.resonators, function(ind, reso) {
           if(reso !== null) {
             if(getPlayerName(reso.ownerGuid) === nick){
-              playerResos[''+reso.level]--;
+              playerResos[reso.level]--;
               playerResocount++;
               levelsum += reso.level;
             } else {
@@ -94,23 +93,19 @@ function wrapper() {
           }
         });
 
-        var resoString = "";
+        var resos = [];
         resoCount = playerResocount;
 
         $.each(portalResos, function(ind, reso) {
           while(reso>0){
             var nextReso = 8;
-            while(playerResos[''+nextReso] <= 0){
+            while(playerResos[nextReso] <= 0){
               nextReso--;
             }
             if (ind < nextReso) {
-              playerResos[''+nextReso]--;
+              playerResos[nextReso]--;
               levelsum += nextReso;
-              if (resoString === "") {
-                resoString = '' + nextReso;
-              } else {
-                resoString += ', ' + nextReso;
-              }
+              resos.push(nextReso);
             } else {
               levelsum += ind;
             }
@@ -137,7 +132,7 @@ function wrapper() {
           } else if (possibleLevel >= 4) {
             currentIcon = iconL4;
           }
-          var m = L.marker([portal._latlng.lat, portal._latlng.lng], {title: portal.options.level+"->"+possibleLevel + ": " + resoString, clickable: false, icon: currentIcon});
+          var m = L.marker([portal._latlng.lat, portal._latlng.lng], {title: portal.options.level+" → "+possibleLevel + ": " + resos.join(', '), clickable: false, icon: currentIcon});
           m.on('mouseout', function() { $(this._icon).tooltip('close'); });
           m.addTo(window.plugin.upgradeablePortals.layer);
           window.setupTooltips($(m._icon));
