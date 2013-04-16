@@ -93,7 +93,7 @@ function wrapper() {
           }
         });
 
-        var resoString = "";
+        var resos = [];
         resoCount = playerResocount;
 
         $.each(portalResos, function(ind, reso) {
@@ -105,11 +105,7 @@ function wrapper() {
             if (ind < nextReso) {
               playerResos[nextReso]--;
               levelsum += nextReso;
-              if (resoString === "") {
-                resoString = '' + nextReso;
-              } else {
-                resoString += ', ' + nextReso;
-              }
+              resos.push(nextReso);
             } else {
               levelsum += ind;
             }
@@ -136,7 +132,7 @@ function wrapper() {
           } else if (possibleLevel >= 4) {
             currentIcon = iconL4;
           }
-          var m = L.marker([portal._latlng.lat, portal._latlng.lng], {title: portal.options.level+"->"+possibleLevel + ": " + resoString, clickable: false, icon: currentIcon});
+          var m = L.marker([portal._latlng.lat, portal._latlng.lng], {title: portal.options.level+" → "+possibleLevel + ": " + resos.join(', '), clickable: false, icon: currentIcon()});
           m.on('mouseout', function() { $(this._icon).tooltip('close'); });
           m.addTo(window.plugin.upgradeablePortals.layer);
           window.setupTooltips($(m._icon));
