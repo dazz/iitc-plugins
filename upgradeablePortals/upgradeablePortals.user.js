@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             upgradeablePortals@smilodazsprod
 // @name           iitc: upgradeablePortals
-// @version        0.2.1
+// @version        0.2.2
 // @updateURL      https://github.com/dazz/iitc-plugins/raw/master/upgradeablePortals/upgradeablePortals.user.js
 // @downloadURL    https://github.com/dazz/iitc-plugins/raw/master/upgradeablePortals/upgradeablePortals.user.js
 // @description    Shows marker on portals that can be upgraded to at least player level - 1
