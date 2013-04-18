@@ -133,9 +133,14 @@ function wrapper() {
           } else if (possibleLevel >= 4) {
             currentIcon = iconL4;
           }
+          var m = L.marker([portal._latlng.lat, portal._latlng.lng], {title: portal.options.level+"->"+possibleLevel + ": " + resos.join(', '), referenceToPortal: portal.options.guid, icon: currentIcon});
           m.on('mouseout', function() { $(this._icon).tooltip('close'); });
           m.on('click', function(player) { window.renderPortalDetails(player.target.options.referenceToPortal); });
-          m.addTo(window.plugin.upgradeablePortals.layer);
+          if (possibleLevel > portal.options.level) {
+            m.addTo(window.plugin.upgradeablePortals.layer);
+          } else {
+            m.addTo(window.plugin.upgradeablePortals.layer2);
+          }
           window.setupTooltips($(m._icon));
         }
       }
@@ -156,24 +161,30 @@ function wrapper() {
 
   window.plugin.upgradeablePortals.setup = function() {
     window.plugin.upgradeablePortals.layer = L.layerGroup([]);
+    window.plugin.upgradeablePortals.layer2 = L.layerGroup([]);
+
 
     window.addHook('checkRenderLimit', function(e) {
-      if (window.map.hasLayer(window.plugin.upgradeablePortals.layer) &&
+      if ((window.map.hasLayer(window.plugin.upgradeablePortals.layer) ||
+          window.map.hasLayer(window.plugin.upgradeablePortals.layer2) ) &&
           window.plugin.upgradeablePortals._renderLimitReached)
         e.reached = true;
     });
 
     window.addHook('portalDataLoaded', function(e) {
-      if (window.map.hasLayer(window.plugin.upgradeablePortals.layer))
+      if ((window.map.hasLayer(window.plugin.upgradeablePortals.layer) ||
+          window.map.hasLayer(window.plugin.upgradeablePortals.layer2) ))
         window.plugin.upgradeablePortals.updateLayer();
     });
 
     window.map.on('layeradd', function(e) {
-      if (e.layer === window.plugin.upgradeablePortals.layer)
+      if (e.layer === window.plugin.upgradeablePortals.layer ||
+         e.layer === window.plugin.upgradeablePortals.layer2)
         window.plugin.upgradeablePortals.updateLayer();
     });
     window.map.on('zoomend moveend', window.plugin.upgradeablePortals.updateLayer);
     window.layerChooser.addOverlay(window.plugin.upgradeablePortals.layer, 'Upgradeable Portals');
+    window.layerChooser.addOverlay(window.plugin.upgradeablePortals.layer2, 'Already upgraded Portals');
 
     //map.addLayer(window.plugin.upgradeablePortals.layer);
   };
