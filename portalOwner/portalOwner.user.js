@@ -57,9 +57,10 @@ function wrapper() {
       var nick = PLAYER.nickname;
 
       if(getPlayerName(portal.options.details.captured.capturingPlayerId) === nick){
-        var m = L.marker([portal._latlng.lat, portal._latlng.lng], {title: nick, clickable: false, icon: icon});
+        var m = L.marker([portal._latlng.lat, portal._latlng.lng], {title: nick, referenceToPortal: portal.options.guid, icon: icon});
         // ensure tooltips are closed, sometimes they linger
         m.on('mouseout', function() { $(this._icon).tooltip('close'); });
+        m.on('click', function(player) { window.renderPortalDetails(player.target.options.referenceToPortal); });
         m.addTo(window.plugin.portalOwner.layer);
         // jQueryUI doesn’t automatically notice the new markers
         window.setupTooltips($(m._icon));
@@ -67,8 +68,9 @@ function wrapper() {
         $.each(portal.options.details.resonatorArray.resonators, function(ind, reso) {
           if(reso !== null) {
             if(getPlayerName(reso.ownerGuid) === nick) {
-              var m = L.marker([portal._latlng.lat, portal._latlng.lng], {title: nick, clickable: false, icon: iconYellow});
+              var m = L.marker([portal._latlng.lat, portal._latlng.lng], {title: nick, referenceToPortal: portal.options.guid, icon: iconYellow});
               m.on('mouseout', function() { $on(this._icon).tooltip('close'); });
+              m.on('click', function(player) { window.renderPortalDetails(player.target.options.referenceToPortal); });
               m.addTo(window.plugin.portalOwner.layer);
               // jQueryUI doesn’t automatically notice the new markers
               window.setupTooltips($(m._icon));
