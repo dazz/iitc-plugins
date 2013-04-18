@@ -136,7 +136,7 @@ function wrapper() {
           var m = L.marker([portal._latlng.lat, portal._latlng.lng], {title: portal.options.level+"->"+possibleLevel + ": " + resos.join(', '), referenceToPortal: portal.options.guid, icon: currentIcon});
           m.on('mouseout', function() { $(this._icon).tooltip('close'); });
           m.on('click', function(player) { window.renderPortalDetails(player.target.options.referenceToPortal); });
-          if (possibleLevel > portal.options.level) {
+          if (Math.floor(possibleLevel) > portal.options.level) {
             m.addTo(window.plugin.upgradeablePortals.layer);
           } else {
             m.addTo(window.plugin.upgradeablePortals.layer2);
