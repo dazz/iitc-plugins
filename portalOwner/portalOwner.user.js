@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             portalOwner@smilodazsprod
 // @name           iitc: portalOwner
-// @version        0.1.2
+// @version        0.1.3
 // @updateURL      https://raw.github.com/dazz/iitc-plugins/gh-pages/plugins/portalOwner.user.js
 // @downloadURL    https://raw.github.com/dazz/iitc-plugins/gh-pages/plugins/portalOwner.user.js
 // @description    Shows red marker where player is owner of a portal and a yellow marker if player has resos in a portal
