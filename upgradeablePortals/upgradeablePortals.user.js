@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             upgradeablePortals@smilodazsprod
 // @name           iitc: upgradeablePortals
-// @version        0.2.3
+// @version        0.2.4
 // @updateURL      https://github.com/dazz/iitc-plugins/raw/master/upgradeablePortals/upgradeablePortals.user.js
 // @downloadURL    https://github.com/dazz/iitc-plugins/raw/master/upgradeablePortals/upgradeablePortals.user.js
 // @description    Shows marker on portals that can be upgraded to at least player level - 1
@@ -136,9 +136,9 @@ function wrapper() {
           var m = L.marker([portal._latlng.lat, portal._latlng.lng], {title: portal.options.level+"->"+possibleLevel + ": " + resos.join(', '), referenceToPortal: portal.options.guid, icon: currentIcon});
           m.on('mouseout', function() { $(this._icon).tooltip('close'); });
           m.on('click', function(player) { window.renderPortalDetails(player.target.options.referenceToPortal); });
-          if (Math.floor(possibleLevel) > portal.options.level) {
+          if (Math.floor(possibleLevel) > Math.floor(portal.options.level)) {
             m.addTo(window.plugin.upgradeablePortals.layer);
-          } else {
+          } else if (possibleLevel > portal.options.level) {
             m.addTo(window.plugin.upgradeablePortals.layer2);
           }
           window.setupTooltips($(m._icon));
