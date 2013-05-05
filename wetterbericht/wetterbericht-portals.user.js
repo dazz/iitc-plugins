@@ -470,14 +470,23 @@ function wrapper() {
       },
       'AVK': {
         'portals': [
-          'dd4689f6d9624055bce2f17d8c1483b4.11', // Vier Heilige Schwestern
-          '9993563ede9845168a82bf01a1df5718.11', // Menschen und Gepäck
           '02be108a638c4fe0bc20d4192c938428.11', // Auguste Viktoria Klinik
+          '03f38223d20d4b029e70799e74eb4e34.11', // avk kunst
+          '0a07f293cabc4eeda993d58b732c76c3.16', // Steinturm
+          '1d503a28e841417f87477299a2f7df21.11', // Bauarbeiter im AVK
+          '2412b67a6fd24aa2ab53234fc1696dd3.11', // 4 kömpfe hinter glas vol.1
+          '5fec30f11c244a64a7578c257d867b6e.11', // Mann Mit Koffer
+          '673d60d9010c4fedaa0897c4c267a709.16', // Ancient Pillars
+          '6dd5a381c95644e9bfb6f407811b3b8b.11', // AVK Elefant
+          '6fac895bd55e49cc948fef5351e7169d.11', // Taschenpyramide
+          '851490eb1f974cfca9650c9b739416aa.11', // Kunst des Vivantes
           '93257a77bfb142b4b81a296352b524d2.11', // Thüster Nautiliden
+          '9993563ede9845168a82bf01a1df5718.11', // Menschen und Gepäck
           'acb70f415f2348b58b3484a85560dcdd.11', // Rotation Sculpture
           'b4ac0a2e705e4a2c831a876ba16c33de.11', // Mädchen von Yukatan
-          '6fac895bd55e49cc948fef5351e7169d.11', // Taschenpyramide
           'c86bd275e0fe4d2ba23b56baa53756d5.11', // Berlin Bear
+          'dd4689f6d9624055bce2f17d8c1483b4.11', // Vier Heilige Schwestern
+          'de4da1476c7c4731a4c58a06f27e6f11.11', // Man Without Legs
         ]
       }
 //      '': {
