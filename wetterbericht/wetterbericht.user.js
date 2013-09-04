@@ -59,7 +59,7 @@ function wrapper() {
             if (typeof area_data[faction]['portals'][pid] === "undefined") {
               area_data[faction]['portals'][pid] = 1;
               area_data[faction]['sum']   += window.getPortalLevel(d[2]);
-              area_data[faction]['maxAP'] += window.getAttackApGain(d[2]).totalAp;
+              area_data[faction]['maxAP'] += (window.getAttackApGain(d[2]).destroyAp + window.getAttackApGain(d[2]).captureAp);
 
               //window.plugin.wetterbericht.export.add(d);  // [1] collect all portals in list to filter double entries
             }
